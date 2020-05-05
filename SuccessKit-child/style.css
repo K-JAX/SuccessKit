@@ -65,8 +65,25 @@ p {
     width: 100%;
     float: left;
     background-color: #548bff;
-    padding-top: 40px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+}
+
+.hero-bg {
+    width: 100%;
+    float: left;
+    background-color: #548bff;
     padding-bottom: 60px;
+}
+
+.top-block{
+    margin: 0 0 15px;
+}
+
+@media all and (max-width: 767px){
+    .top-block{
+        margin: 0 0 50px !important;
+    }
 }
 
 a.custom-logo-link img {
@@ -549,12 +566,16 @@ input:focus {
 
 .header--fixed.placeholder-only{
     position: relative !important;
-    padding-bottom: 225px;
-
+    padding-bottom: 200px;
     background: #548bff;
-    
     z-index: 0;
 }
+@media all and (max-width: 767px){
+    .header--fixed.placeholder-only{
+        padding-bottom: 115px;
+    }
+}
+
 
 .img-holder{
     margin: 0 !important;
@@ -570,7 +591,8 @@ input:focus {
 ul.table-list h5 {
     width: 100%;
     float: left;
-    padding-bottom: 55px;
+    padding-bottom: 23px;
+    margin-top: 14px;
 }
 
 
@@ -935,6 +957,9 @@ ul.table-list p {
 
 /* blog page  */
 
+.blog-link{
+    cursor: pointer;
+}
 
 .hovereffect {
 width:100%;
@@ -1418,7 +1443,8 @@ width: 100%;
     float: left;
     font-size: 20px;
     color: #2c214d;
-    margin-bottom: 20px;
+    margin-top: 1em;
+    margin-bottom: 1em;
     margin-left: 15px;
 	font-family: 'Alegreya', serif !important;
 }
@@ -1428,11 +1454,12 @@ width: 100%;
     width: 20px;
     height: 20px;
     position: absolute;
-    background-image: url(http://websitedemoonline.com/successkit/wp-content/uploads/2020/02/arrow-icon.png);
+    background-image: url(https://successkit-staging.t4v427p7-liquidwebsites.com/wp-content/uploads/2020/05/arrow-icon.png);
     background-size: cover;
     background-position: center;
     left: 0;
     margin-right: 10px;
+    margin-top: 5px;
 }
 
 
@@ -1550,7 +1577,12 @@ a.yellow {
 /*** Our Work ***/
 
 .our-work {
-	padding: 100px 0 80px 0;
+	padding: 50px 0 80px 0;
+}
+@media all and (max-width: 767px){
+    .our-work {
+        padding: 15px 0 80px 0;
+    }   
 }
 
 .our-work h2 {
@@ -1684,10 +1716,10 @@ ul.table-list h5 a {
     font-size: 18px;
     font-weight: 100;
 }
-ul.table-list p {
+/* ul.table-list p {
    height:150px;
    margin-top: 40px;
-}
+} */
 
 .bottom-pricing-text {
     width: 100%;
