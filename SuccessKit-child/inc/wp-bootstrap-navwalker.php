@@ -230,6 +230,13 @@ class successkit_navwalker extends Walker_Nav_Menu
          * @param int      $depth Depth of menu item. Used for padding.
          */
         $title = apply_filters('nav_menu_item_title', $title, $item, $args, $depth);
+
+        if (isset($args->has_children) && $args->has_children && 0 === $depth && $args->depth > 1){
+            $dropDown_button = ' <button class="dropdown-btn"></button>';
+        }else {
+            $dropDown_button = '';
+        }
+        
         /**
          * If the .sr-only class was set apply to the nav items text only.
          */
@@ -241,7 +248,7 @@ class successkit_navwalker extends Walker_Nav_Menu
             }
         }
         // Put the item contents into $output.
-        $item_output .= isset($args->link_before) ? $args->link_before . $icon_html . $title . $args->link_after : '';
+        $item_output .= isset($args->link_before) ? $args->link_before . $icon_html . $title . $dropDown_button . $args->link_after : '';
         /**
          * This is the end of the internal nav item. We need to close the
          * correct element depending on the type of link or link mod.

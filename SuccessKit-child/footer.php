@@ -44,7 +44,7 @@
 	</div>
 </footer>
 
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/owl.carousel.min.js" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
 
@@ -109,7 +109,24 @@
 //    }
 // }); 
 // });
-	        
+
+$('.dropdown-btn').on('click', function(event){
+	event.preventDefault();
+	parent = $(this).parent()
+	dropdownMenu = $(parent).siblings()[0];
+
+	console.log('clicked')
+
+	if ( $(this).attr('aria-expanded') !== 'true' ){
+		$(this).attr('aria-expanded', 'true');
+		$(parent).attr('aria-expanded', 'true');
+	}else{
+		$(this).attr('aria-expanded', 'false');
+		$(parent).attr('aria-expanded', 'false');
+	}
+	$(dropdownMenu).toggleClass('show');
+})
+
 </script>
 
 <script>

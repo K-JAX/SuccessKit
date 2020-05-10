@@ -30,9 +30,11 @@
         ));
         ?>
        <?php endif; ?>
-	    <div class="get-started">
-  <a href="<?php echo site_url(); ?>/learn-more/" >Book a Demo</a>
-  </div>
+       <a href="<?php echo site_url(); ?>/learn-more/" >
+	        <div class="get-started">
+            Book a Demo
+          </div>
+        </a>
      </div>
    </nav>
  </div>
