@@ -589,13 +589,17 @@ input:focus {
     }
 }
 
+.post-template-default.single-post .header-bg{
+    height:134px;
+}
+
 .post-template-default .header--fixed.placeholder-only{
-    padding-bottom: 57px;
+    padding-bottom: 36px;
 }
 
 .post-template-default .our-process{
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
 
 .post-template-default h4{
@@ -1114,10 +1118,10 @@ bottom:0;
 }
 
 .blog-text-content{
-	    background: #f6f6f6;
+    background: #f6f6f6;
 	width:100%;
 	float:left;
-	padding: 50px 0px;
+	padding: 30px 0px;
 }
 
 .blog-design-content h2 {
@@ -1129,15 +1133,15 @@ bottom:0;
 }
 
 .blog-design-content h2{
-    margin: 3rem 0 1.5rem;
+    margin: 3.25rem 0 2rem;
 }
 
 .blog-design-content p {
     color: #2c214d;
     font-size: 22px;
-    line-height: 1.2;
+    line-height: 1.5;
     font-weight: 500;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.5rem;
 }
 .owncase-study .hovereffect img {
     height: 353px !important;
@@ -1493,6 +1497,7 @@ width: 100%;
 }
 
 section.contact-recent-posts .hovereffect img{
+    object-fit: cover;
 	height:580px;
 }
 

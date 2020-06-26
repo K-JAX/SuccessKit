@@ -29,10 +29,10 @@
 <ul>
 <li><a href=""><?php echo get_the_author_meta('first_name');?></a> <img src="<?php echo site_url(); ?>/wp-content/uploads/2020/02/arrow-icon.png"></li>
 <li><a href=""><?php echo  the_date(); ?></a> <img src="<?php echo site_url(); ?>/wp-content/uploads/2020/02/arrow-icon.png"></li>
-<li><a href=""><?php $categories = get_the_category();
+<!-- <li><a href=""><?php $categories = get_the_category();
 if ( ! empty( $categories ) ) {
     echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
-} ?></a> </li>
+} ?></a> </li> -->
 </ul>
 </div>
 <div class="blog-social-detail">
