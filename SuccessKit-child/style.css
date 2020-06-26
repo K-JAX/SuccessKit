@@ -590,11 +590,19 @@ input:focus {
 }
 
 .post-template-default.single-post .header-bg{
-    height:134px;
+    height:auto;
 }
 
 .post-template-default .header--fixed.placeholder-only{
     padding-bottom: 36px;
+}
+
+.post-template-default.single-post .header--fixed{
+    padding-bottom: 0;
+}
+
+.post-template-default.single-post .top-block{
+    display: none;
 }
 
 .post-template-default .our-process{
