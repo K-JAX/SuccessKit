@@ -2441,6 +2441,22 @@ section.contact-recent-posts .hovereffect .overlay{
 	
 }
 
+/* utility classes */
+
+.bg-lightgray{
+	background-color: #dedede;
+}
 
 
+/* slideshow classes */
+.gs_logo_single{
+	padding: 1em 3em;
+}
 
+.gs_logo_area.grid1{
+    background: #dedede;
+}
+
+.gs_logo_area.grid1 .gs_logo_single img{
+	width: 150px;
+}

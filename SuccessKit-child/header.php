@@ -71,31 +71,7 @@ get_template_part('header-parts/header', 'bottom');
     echo '</h2>';
 }?></h2>
      </div>
-     <?php elseif ($ptitle == "About us"): ?>
 
-       <div class="about-us-text header-bg">
-       <div class="container">
-    <div class="banner-size">
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                <div class="slider-text abouts-text-h">
-                    <h1>About us</h1>
-                    <p>We are a small team of sales, marketing, and content professionals devoted to enabling all companies to leverage their client’s success in the form of Case Studies.</p>
-
-                </div>
-            </div>
-
-            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                <div class="slider-img">
-                    <img src="<?php echo site_url(); ?>/wp-content/uploads/2020/02/about-us.png" class="img-fluid">
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-</div>
-       </div>
      <?php elseif ($ptitle == "Our Work"): ?>
       <div class="pricing">
       <h2><?php if (is_archive()) {

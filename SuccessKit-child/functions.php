@@ -219,3 +219,5 @@ function placeholder_comment_form_field($fields) {
     return $fields;
  }
 add_filter( 'comment_form_defaults', 'placeholder_comment_form_field' );
+
+add_post_type_support( 'page', 'excerpt' );
