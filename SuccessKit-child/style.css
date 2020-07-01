@@ -93,6 +93,7 @@ a.custom-logo-link img {
 
 .header--fixed {
     padding-bottom: 50px;
+    z-index: 101;
 }
 
 .header--fixed .container {
@@ -2443,10 +2444,68 @@ section.contact-recent-posts .hovereffect .overlay{
 
 /* utility classes */
 
+.text-purple{
+    color: #2c214d;
+}
+
+.text-white{
+    color: #fff;
+}
+
 .bg-lightgray{
 	background-color: #dedede;
 }
 
+.bg-blue{
+    background-color: #548bff;
+}
+
+.text-initial{
+    text-transform: initial;
+}
+
+.theme-border{
+    border: 3px solid #2c214d;
+    border-radius: 300px;
+}
+
+.theme-btn-hover a{
+    transition: 0.2s;
+}
+
+.theme-btn-hover a:hover{
+    color: #3e529f !important;
+    background-color: #548bff !important;
+}
+
+.wp-block-button a{
+    font-size: 1.05em;
+    font-weight: 600;
+    padding: 0.85em 3em;
+}
+
+.is-style-outline .wp-block-button__link{
+    border-width: 4px;
+}
+
+.secondary-button .wp-block-button__link{
+    border-color: #2c214d;
+}
+
+.secondary-button .wp-block-button__link:hover{
+    border-color: #4eff74 !important;
+}
+
+.mono{
+    font-family: 'Roboto Mono', monospace !important;
+}
+
+h4.process-text{
+    color: #2c214d;
+    font-family: 'Roboto Mono', monospace !important;
+    font-size: 16px;
+    margin-bottom: 50px;
+}
 
 /* slideshow classes */
 .gs_logo_single{
@@ -2460,3 +2519,97 @@ section.contact-recent-posts .hovereffect .overlay{
 .gs_logo_area.grid1 .gs_logo_single img{
 	width: 150px;
 }
+
+.testimonial_rotator_wrap .template-threepigs .wp-post-image{
+    max-width: 180px;
+}
+
+.wpmslider-wrapper .wpmtst-testimonial-heading{
+    display: none;
+}
+
+.wpmslider-wrapper h3 b{
+    text-transform: uppercase;
+    font-family: 'Roboto Mono', monospace !important;
+    font-size: 16px;
+}
+
+.wpmslider-wrapper p{
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.wpmtst-testimonial-content{
+    padding: 0.5em 1.5em;
+}
+
+.wpmslider-wrapper .wp-post-image{
+    width: 270px;
+    height: auto;
+    margin-bottom: 4em;
+    padding: 5px;
+    border: 5px solid white;
+    box-shadow: 0 0 0 5px #548bff inset, 3px 2px 12px 1px rgba(0,0,0,0.5);
+}
+
+.company-badge{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    padding:1em;
+    left: 60%;
+    top: 0;
+    bottom: 1em;
+    margin: auto;
+    background: white;
+    box-shadow: 10px 10px 10px 0 rgba(0,0,0,0.25);
+    border-radius: 300px;
+}
+
+.company-badge img{
+    width: 100%;
+    
+}
+
+.wpmtst-testimonial-content{
+    text-align: center;
+    color: #2c214d;
+}
+
+/* Team Plugin */
+/* .tlp-row.layout3{ */
+    /* flex-direction: column; */
+/* } */
+/* 
+.team-member{
+    width: 100%;
+} */
+.team-member{
+    width: 100%;
+    float: left;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 3px 2px 10px 0px #999;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.tlp-team .layout3 .single-team-area h3{
+    text-transform: initial;
+    font-size: 36px;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.tlp-team .layout3 .single-team-area p{
+    font-size: 20px;
+    line-height: 30px;
+    color: #2c214d;
+    font-weight: 500;
+}
+
+.testimonial-image img{
+    border-radius: 300px;
+}
+
