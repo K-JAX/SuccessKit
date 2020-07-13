@@ -54,7 +54,8 @@
     center: true,
     items:1,
     loop:true,
-    margin:10,
+	margin:10,
+	// autoWidth: true,
     autoplay:true,
     autoplayTimeout:3000,
     responsive:{

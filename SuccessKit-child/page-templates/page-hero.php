@@ -13,13 +13,19 @@ get_header(); ?>
             <h2><?php the_title();?></h2>
         </div> -->
 
-        <div class="about-us-text header-bg">
+        <div class="about-us-text hero-bg">
             <div class="container">
                 <div class="banner-size">
                     <div class="row">
                         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
                             <div class="slider-text abouts-text-h">
-                                <h1><?php the_title();?></h1>
+                                <h1>
+                                    <?php if( class_exists('ACF') ): 
+                                        empty( get_field('page_h1_title') ) ? the_title() : the_field('page_h1_title');
+                                    else:
+                                        the_title();
+                                    endif; ?>
+                                </h1>
                                 <?php the_excerpt();?>
 
                             </div>

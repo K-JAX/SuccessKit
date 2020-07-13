@@ -85,30 +85,6 @@ get_template_part('header-parts/header', 'bottom');
 
 
 
-<?php elseif ($ptitle == "Our Process"): ?>
-
-       <div class="about-us-text header-bg">
-       <div class="container">
-    <div class="banner-size">
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                <div class="slider-text abouts-text-h">
-                    <h1>Our process & offering</h1>
-                    <p>SuccessKit handles your Case Studies from start to finish. We have refined our process by creating hundreds of unique Case Studies, and we have seen it all!</p>
-
-                </div>
-            </div>
-
-            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                <div class="slider-img">
-                    <img src="<?php echo site_url(); ?>/wp-content/uploads/2020/02/our-process.png" class="img-fluid">
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-</div>
 
 <?php elseif ($ptitle == "Blog"): ?>
       <div class="pricing">
