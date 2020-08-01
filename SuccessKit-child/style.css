@@ -2701,3 +2701,124 @@ h4.process-text {
     right: 0;
     box-shadow: -20px 0 30px 0 inset white;
 }
+
+
+/* scroll down indicator */
+.chevron-strip{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: 120px;
+    right: 15vw;
+    bottom: 2%;
+    margin: auto;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 5px 0 rgba(255,255,255,0.5);
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  .chevron-strip.scrolled{
+      display: none;
+      opacity: 0;
+  }
+  .chevron-strip.idle{
+      display: flex;
+      opacity: 1;
+  }
+  .chevron-strip p{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-family: 'Poppins', sans-serif !important;
+    animation: 4s lightenText infinite;
+  }
+  .chevron{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: -2px auto;
+    border: 2px solid black;
+    border-left: none;
+    border-top: none;
+    transform: rotate(45deg);
+    animation: 4s lightenStrip infinite;
+  }
+  
+  .chevron:first-of-type{
+    opacity: 0.25;
+    animation-delay:0s;
+  }
+  
+  .chevron:nth-of-type(2){
+    opacity: 0.5;
+    animation-delay:0.2s;
+  }
+  
+  .chevron:last-of-type{
+    animation-delay:0.4s;
+  }
+  
+  @keyframes lightenStrip{
+    0%{
+      border-color: black;
+      opacity: 0;
+      margin-top: -4px;
+    }
+    10%{
+      border-color: black;
+    }
+    20%{
+      border-color: #00AEEF;
+      opacity: 1;
+      margin-top: -2px;
+    }
+    30%{
+      border-color: black;
+      opacity: 0.15;
+      margin-top: 0px;
+    }
+    50%{
+      border-color: black;
+      opacity: 0;
+      margin-top: 2px;
+    } 
+    100%{
+      border-color: black;
+      opacity: 0;
+    }
+  }
+
+@keyframes lightenText{
+    0%{
+        opacity: 0;
+        color: black;
+    }
+    5%{
+        opacity: 0;
+    }
+    23%{
+        opacity: 0.55;
+        color: black;
+    }
+    30%{
+        opacity: 0.75;
+        color: #00aeef;
+    }
+    100%{
+        color: black;
+        opacity: 0;
+    }
+}
+
+@media all and (max-width: 992px){
+    .chevron-strip{
+        left: 0;
+        right: 0;
+    }
+}
