@@ -26,9 +26,12 @@ h5 {
 }
 
 /* normalizing list items */
-li{
+ul{
     list-style: disc;
     padding-left: 40px;
+    font-size: 22px;
+    font-family: "Alegreya", serif !important;
+    margin-bottom: 1.1em;
 }
 
 p {
@@ -1608,7 +1611,7 @@ section.contact-recent-posts {
     font-family: "Alegreya", serif !important;
 }
 
-.learn-about-content ul li:before {
+/* .learn-about-content ul li:before {
     content: "";
     width: 20px;
     height: 20px;
@@ -1619,7 +1622,7 @@ section.contact-recent-posts {
     left: 0;
     margin-right: 10px;
     margin-top: 5px;
-}
+} */
 
 section.contact-recent-posts .hovereffect img {
     object-fit: cover;
