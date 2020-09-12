@@ -25,6 +25,16 @@ add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css', 10 );
 require get_stylesheet_directory() . '/inc/wp-bootstrap-navwalker.php';
 
 
+if ( ! function_exists( 'successkit_setup' ) ) :
+	function successkit_setup() {
+
+		add_theme_support( 'editor-styles' );
+		add_theme_support( 'responsive-embeds' );
+
+	}
+
+endif;
+
 // END ENQUEUE PARENT ACTION
 
 

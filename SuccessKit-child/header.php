@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/owl.theme.default.min.css" type="text/css"/>
 
 
-  <link href="https://fonts.googleapis.com/css?family=Alegreya:400,400i,500,700,800|Roboto+Mono:100,300,400,400i,500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya:400,400i,500,700,700i,800|Roboto+Mono:100,300,400,400i,500,700&display=swap" rel="stylesheet">
 
 
 

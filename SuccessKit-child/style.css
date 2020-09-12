@@ -11,6 +11,8 @@ Updated: 2020-02-13 10:43:51
 
 */
 
+/* @import url('https://fonts.googleapis.com/css?family=Alegreya:400,400i,500,700,800|Roboto+Mono:100,300,400,400i,500,700&display=swap') */
+
 html,
 body {
     overflow-x: hidden;
@@ -31,6 +33,8 @@ ul{
     padding-left: 40px;
     font-size: 22px;
     font-family: "Alegreya", serif !important;
+}
+li{
     margin-bottom: 1.1em;
 }
 
@@ -1210,13 +1214,18 @@ a.blog-link:hover h5 {
 /* article  */
 
 .article-section img {
-    width: 100%;
+    display: inline-block;
+    text-align: center;
+    width: 650px;
+    object-fit: cover;
+    max-height: 50vh;
 }
 
 .article-section {
     width: 100%;
     float: left;
-    margin: 2px 0px;
+    text-align: center;
+    margin: 1.75em 0px 2px;
 }
 
 .blog-auther-detail {
@@ -1271,6 +1280,9 @@ a.blog-link:hover h5 {
     line-height: 1.5;
     font-weight: 500;
     margin-bottom: 1.5rem;
+}
+.blog-design-content li{
+    color: #2c214d;
 }
 .owncase-study .hovereffect img {
     height: 265px !important;
@@ -1735,6 +1747,48 @@ a.yellow {
     text-transform: capitalize;
     margin-bottom: 40px;
 }
+
+/* Case Study Thumbnails */
+
+
+.case-study-thumbs > .wp-block-group__inner-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.case-study-thumbs figure{
+    width: 28.5%;
+    margin-bottom: 2em;
+    padding: 1em;
+    border-radius: 1em;
+    overflow: hidden;
+    box-shadow: 0px 3px 3px 3px rgba(0,0,0,0.25);
+    transition: 0.125s;
+}
+
+.case-study-thumbs figure:hover{
+    box-shadow: 1px 5px 6px 4px rgba(0,0,0,0.25);
+}
+
+.case-study-thumbs figure img{
+    height: auto;
+}
+
+@media all and (max-width: 992px){
+    .case-study-thumbs figure{
+        width: 45%;
+    }
+}
+
+@media all and (max-width: 767px){
+    .case-study-thumbs figure{
+        width: 75%;
+    }
+}
+
+/* //Case Study Thumbnails */
 
 .work-item {
     /* box-shadow: 0 0 10px #a9a5a5; */
@@ -2510,9 +2564,30 @@ a.film_roll_next {
 }
 
 /* wordpress class customizations */
+
+/* Main column width */
+.wp-block {
+    max-width: 720px;
+}
+ 
+/* Width of "wide" blocks */
+.wp-block[data-align="wide"] {
+    max-width: 1080px;
+}
+ 
+/* Width of "full-wide" blocks */
+.wp-block[data-align="full"] {
+    max-width: none;
+}
+
 .wp-block-column.col-md-12:not(:first-child) {
     margin-left: 0;
 }
+
+.aligncenter{
+    text-align:center;
+}
+
 @media (min-width: 600px) and (max-width: 781px) {
     .wp-block-column.col-md-12 {
         width: 100% !important;
