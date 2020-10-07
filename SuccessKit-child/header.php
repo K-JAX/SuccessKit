@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/owl.theme.default.min.css" type="text/css"/>
 
 
-  <link href="https://fonts.googleapis.com/css?family=Alegreya:400,400i,500,700,800|Roboto+Mono:100,300,400,400i,500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya:400,400i,500,700,700i,800|Roboto+Mono:100,300,400,400i,500,700&display=swap" rel="stylesheet">
 
 
 
@@ -85,30 +85,6 @@ get_template_part('header-parts/header', 'bottom');
 
 
 
-<?php elseif ($ptitle == "Our Process"): ?>
-
-       <div class="about-us-text header-bg">
-       <div class="container">
-    <div class="banner-size">
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                <div class="slider-text abouts-text-h">
-                    <h1>Our process & offering</h1>
-                    <p>SuccessKit handles your Case Studies from start to finish. We have refined our process by creating hundreds of unique Case Studies, and we have seen it all!</p>
-
-                </div>
-            </div>
-
-            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                <div class="slider-img">
-                    <img src="<?php echo site_url(); ?>/wp-content/uploads/2020/02/our-process.png" class="img-fluid">
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-</div>
 
 <?php elseif ($ptitle == "Blog"): ?>
       <div class="pricing">
@@ -133,16 +109,6 @@ get_template_part('header-parts/header', 'bottom');
 }?></h2>
      </div>
 
-     <?php elseif ($ptitle == "Book a Demo"): ?>
-      <div class="pricing">
-      <h2><?php if (is_archive()) {
-    the_archive_title('<h2>', '</h2>');
-} else {
-    echo '<h2>';
-    echo esc_html(get_the_title());
-    echo '</h2>';
-}?></h2>
-     </div>
 
      <?php elseif ($ptitle == "Privacy Policy"): ?>
       <div class="pricing">
