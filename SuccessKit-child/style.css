@@ -182,7 +182,7 @@ p {
 }
 
 a.custom-logo-link img {
-    width: 210px;
+    width: 240px;
     height: auto;
 }
 
@@ -193,13 +193,15 @@ a.custom-logo-link img {
 
 .header--fixed .container {
     padding-bottom: 20px;
-    border-bottom: 3px solid #2c214d;
+    /* border-bottom: 3px solid #2c214d; */
+    max-width: 1440px !important;
 }
 
 header .navbar .nav-link {
     font-size: 16px !important;
-    color: #2c214d !important;
+    color: #fff !important;
     font-family: "Roboto Mono", monospace !important;
+    font-weight: 700;
 }
 
 /* reseting the parent theme menu dropdown caret look */
