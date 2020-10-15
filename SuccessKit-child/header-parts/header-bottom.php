@@ -17,20 +17,21 @@
         </div>
       </button>
 
+      
       <?php
       if ( has_nav_menu( 'primary' ) ) :
         wp_nav_menu( array(
           'theme_location'    => 'primary',
           'depth'             => 7,
           'menu_class'        => 'navbar-nav ml-auto',
-          'container_class' => 'collapse navbar-collapse',
+          'container_class' => 'collapse navbar-collapse mt-4 mt-lg-0',
           'container_id' => 'navbarSupportedContent', 
           'fallback_cb'       => 'educational_navwalker::fallback',
           'walker'            => new successkit_navwalker(),
         ));
         ?>
        <?php endif; ?>
-       <a href="<?php echo site_url(); ?>/learn-more/" >
+       <a id="greenBttn" href="<?php echo site_url(); ?>/learn-more/" >
 	        <div class="get-started">
             Learn More
           </div>

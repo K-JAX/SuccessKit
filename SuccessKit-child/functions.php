@@ -21,6 +21,12 @@ if ( !function_exists( 'chld_thm_cfg_parent_css' ) ):
 endif;
 add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css', 10 );
 
+if ( !function_exists( 'successkit_scripts' ) ):
+    function successkit_scripts() {
+        wp_enqueue_script( 'scriptjs', trailingslashit( get_stylesheet_directory_uri() ) . 'assets/js/script.js', array(), rand(111,9999), true );
+    }
+endif;
+add_action( 'wp_enqueue_scripts', 'successkit_scripts', 10 );
 
 require get_stylesheet_directory() . '/inc/wp-bootstrap-navwalker.php';
 
