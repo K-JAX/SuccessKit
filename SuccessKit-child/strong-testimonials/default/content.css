@@ -105,6 +105,21 @@ Thanks https://css-tricks.com/minimum-paragraph-widths/
   padding-left: 40px;
   text-align: left;
 }
+.curly-quote{
+  position: relative;
+  background: url("img/quotes.png") no-repeat scroll left center / contain transparent;
+  width: 60px;
+  height: 60px;
+}
+.strong-view.wpmtst-default .wpmtst-testimonial-content h3{
+  /* color: #548bff; */
+}
+
+.strong-view.wpmtst-default .wpmtst-testimonial-content blockquote p{
+  font-weight: 700;
+  font-size: 1.5em;
+  color: #406ac1;
+}
 .strong-view.wpmtst-default .wpmtst-testimonial-content p:first-of-type {
   margin-top: 0;
   padding-top: 0;
@@ -128,6 +143,17 @@ Thanks https://css-tricks.com/minimum-paragraph-widths/
 .strong-view.wpmtst-default .wpmtst-testimonial-image a {
   text-decoration: none;
   box-shadow: none;
+}
+.strong-view.wpmtst-default .wpmtst-testimonial-image .initials {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 1px solid #EFEFEF;
+  padding: 6px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 42px;
+  font-weight: bold;
+  display: table-cell;
+  vertical-align: middle;
 }
 .strong-view.wpmtst-default .wpmtst-testimonial-field {
   text-align: right;
@@ -337,5 +363,16 @@ Thanks https://css-tricks.com/minimum-paragraph-widths/
 }
 
 .disabled {
-  display: none!important;
+  display: none !important;
+}
+
+.wpmslider-controls.disabled {
+    display: block !important;
+}
+
+/*  Compatibility with metaslider pro layers display
+----------------------------------------------------*/
+
+.msHtmlOverlay .layer .disabled {
+    display: block !important;
 }

@@ -32,9 +32,9 @@ do_action( 'wpmtst_before_view' );
 
 					<div <?php echo ('slideshow' == $atts['mode']) ? 'data-infinite-loop="'.esc_attr($continuous_slide).'"' : ''; ?> class="wpmtst-testimonial-content testimonial-content">
 
-						<?php if($featured_images){ ?>
+					<?php if($featured_images){ ?>
 						<div class="company-badge">
-							<img src="<?php echo $featured_images[0]['thumb'] ?>" />
+							<img src="<?php echo $featured_images[0]['thumb']; ?>" />
 						</div>
 					<?php }; ?>
 					<?php wpmtst_the_thumbnail(); ?>

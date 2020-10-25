@@ -206,6 +206,23 @@ header .navbar .nav-link {
     font-weight: 700;
 }
 
+header .navbar li.nav-item{
+    margin: 0 25px 0 0;
+}
+
+@media all and (max-width: 992px){
+    header .navbar .nav-link {
+        font-size: 27px !important;
+    }    
+    header .navbar-nav .dropdown-menu{
+        font-size: 27px;
+    }
+    a .get-started{
+        font-size: 27px;
+        border-radius: 300px;
+    }
+}
+
 /* reseting the parent theme menu dropdown caret look */
 .dropdown-toggle::after {
     display: none;
@@ -216,7 +233,7 @@ header .navbar .nav-link {
 
 .get-started {
     float: right;
-    margin-left: 30px;
+    margin-left: 15px;
     background: #4eff74;
     padding: 15px 50px;
     border-radius: 30px;
@@ -2003,7 +2020,7 @@ a.film_roll_next {
 
 @media all and (max-width: 1200px){
     a.custom-logo-link img {
-        width: 190px;
+        width: 170px;
         height: auto;
     }
 }
@@ -2226,7 +2243,7 @@ a.film_roll_next {
         background: #2c214d;
     }
     a.custom-logo-link img {
-        width: 190px;
+        width: 170px;
         height: auto;
     }
     .slider-text h1 {
@@ -2714,13 +2731,15 @@ h4.process-text {
     font-style: italic;
     font-size: 20px;
     font-weight: 500;
+    color: #2c214d;
 }
 
 .wpmtst-testimonial-content {
     padding: 0.5em 1.5em;
 }
 
-.wpmslider-wrapper .wp-post-image {
+.wpmslider-wrapper .wp-post-image,
+body .strong-view.wpmtst-default .wpmtst-testimonial-image img {
     width: 200px;
     height: auto;
     margin-bottom: 4em;
@@ -2728,6 +2747,8 @@ h4.process-text {
     border: 5px solid white;
     box-shadow: 0 0 0 5px #548bff inset, 3px 2px 12px 1px rgba(0, 0, 0, 0.5);
 }
+
+
 
 .company-badge {
     position: absolute;
