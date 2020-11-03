@@ -280,9 +280,9 @@ a .get-started {
     float: left;
 }
 
-.blog-design-content p:nth-child(1):first-letter {
+/* .blog-design-content p:nth-child(1):first-letter {
     font-size: 74px;
-}
+} */
 
 .slider-text a {
     background: transparent;
