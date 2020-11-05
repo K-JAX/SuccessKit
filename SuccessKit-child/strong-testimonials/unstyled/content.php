@@ -10,7 +10,7 @@ $continuous_slide = ( isset( $atts['slideshow_settings']['continuous_sliding'] )
 do_action( 'wpmtst_before_view' );
 ?>
 
-<div class="strong-view <?php wpmtst_container_class(); ?>"<?php wpmtst_container_data(); ?>>
+<div class="strong-view carousel-testimonials <?php wpmtst_container_class(); ?>"<?php wpmtst_container_data(); ?>>
 	<?php do_action( 'wpmtst_view_header' ); ?>
 
 	<div class="strong-content <?php wpmtst_content_class(); ?>">

@@ -141,6 +141,10 @@ p {
     box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.35);
 }
 
+.distant-shadow{
+    box-shadow: 3px 2px 10px 0px #999;
+}
+
 .privacy-cust-page {
     padding: 60px 0px;
     width: 100%;
@@ -2742,13 +2746,49 @@ h4.process-text {
 body .strong-view.wpmtst-default .wpmtst-testimonial-image img {
     width: 200px;
     height: auto;
-    margin-bottom: 4em;
     padding: 5px;
     border: 5px solid white;
     box-shadow: 0 0 0 5px #548bff inset, 3px 2px 12px 1px rgba(0, 0, 0, 0.5);
 }
 
+.carousel-testimonials .wpmtst-testimonial-image img{
+    margin-bottom: 4em;
+}
 
+.carousel-testimonials .company-badge{
+    top: 135px;
+}
+
+.single-feature-testimonial .company-badge{
+    top: 152px;
+}
+
+.single-feature-testimonial .testimonial-quote-icon-bg{
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0.135;
+    user-select: none;
+}
+
+.single-feature-testimonial .testimonial-quote-icon-bg.open{
+    right: 50%;
+}
+
+.single-feature-testimonial .testimonial-quote-icon-bg.close{
+    left: 50%;
+}
+
+.single-feature-testimonial .testimonial-quote-icon-bg text{
+    font-family: 'Times New Roman', serif;
+    font-size: 335px;
+    font-weight: bold;
+    fill: #548bff;
+}
 
 .company-badge {
     position: absolute;
@@ -2756,11 +2796,42 @@ body .strong-view.wpmtst-default .wpmtst-testimonial-image img {
     height: 70px;
     padding: 1em;
     left: 60%;
-    top: 135px;
     margin: auto;
     background: white;
     box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.25);
     border-radius: 300px;
+}
+
+.single-feature-testimonial h3{
+    display: inline-block;
+    margin-bottom: 1em;
+}
+
+.single-feature-testimonial h3 br{
+    display: none;
+}
+
+.single-feature-testimonial h3 b{
+    font-weight: bold;
+}
+
+.single-feature-testimonial h3 b:before{
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 31px;
+    height: 31px;
+    margin: 0.5em 0.175em -0.225em 0.5em;
+    background-image: url("https://successkit.io/wp-content/uploads/2020/02/arrow-icon.png");
+}
+
+.single-feature-testimonial blockquote{
+    font-style: italic;
+}
+
+.single-feature-testimonial blockquote b,
+.single-feature-testimonial blockquote strong{
+    color: #200a3e;
 }
 
 .company-badge img {
