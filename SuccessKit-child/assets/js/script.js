@@ -33,3 +33,14 @@ function largerThan( breakpoint ){
     }
 
 }
+
+var checkExist = setInterval(function() {
+    if ($('.leadinModal-theme-top').length) {
+       $('body').addClass('hubspot-injected')
+    }else if ( $('.leadinModal-theme-top').length == 0 && $('body').hasClass('hubspot-injected')){
+        $('body').removeClass('hubspot-injected')
+        clearInterval(checkExist);
+    }
+
+ }, 200); // check every 100ms
+ 

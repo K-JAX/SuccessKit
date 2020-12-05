@@ -2799,7 +2799,7 @@ body .strong-view.wpmtst-default .wpmtst-testimonial-image img {
     width: 70px;
     height: 70px;
     padding: 1em;
-    left: 77%;
+    left: 65%;
     margin: auto;
     background: white;
     box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.25);
@@ -2808,13 +2808,23 @@ body .strong-view.wpmtst-default .wpmtst-testimonial-image img {
 
 @media all and (max-width: 767px){
     .company-badge {
-        left: 55%;
+        left: 75%;
+    }
+    body .single-feature-testimonial .company-badge{
+        left: 56%;
     }
 }
 
 /* body{
     margin-top: 50px;
 } */
+.hubspot-injected{
+    margin-top: 46px;
+}
+
+.hubspot-injected .headroom--not-top{
+    margin-top: 46px;
+}
 
 .strong-view.wpmtst-default.single-feature-testimonial .quote-body p{
     font-size: 23pt;
@@ -2894,6 +2904,10 @@ body .strong-view.wpmtst-default .wpmtst-testimonial-image img {
 .single-feature-testimonial blockquote b,
 .single-feature-testimonial blockquote strong{
     color: #200a3e;
+}
+
+.single-feature-testimonial .company-badge {
+    left: 77%;
 }
 
 .company-badge img {
