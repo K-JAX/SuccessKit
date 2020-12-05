@@ -9,10 +9,7 @@ get_header(); ?>
 <div class="top-block">
     <?php while (have_posts()): the_post();?>
     <div class="top-title">
-        <!-- <div class="pricing">
-            <h2><?php the_title();?></h2>
-        </div> -->
-
+        <h2><?php the_title();?></h2>
         <div class="about-us-text hero-bg">
             <div class="container">
                 <div class="banner-size">

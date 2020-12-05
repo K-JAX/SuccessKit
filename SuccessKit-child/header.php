@@ -47,16 +47,17 @@ get_template_part('header-parts/header', 'bottom');
 <?php 
 // starting to exclude individual templates from this
 // system one at a time with the following condition
- if (!is_page_template('page-templates/page-hero.php') && !is_page_template('page-templates/page-headline.php')):
+$ptitle = get_the_title();
+ if (!is_page_template('page-templates/page-hero.php') && !is_page_template('page-templates/page-headline.php') && !($ptitle == "Blog")):
 ?>
 <div class="top-block">
-<?php $ptitle = get_the_title();?>
+
   <div class="top-title" style="background: url(<?php if (has_header_image()): echo esc_url(get_header_image());endif;?>);">
    <?php if (is_home()): ?>
     <h2><?php bloginfo('name');?></h2>
 
     <?php elseif ($ptitle == "Pricing"): ?>
-    <div class="pricing">
+    <div class="headline-title">
       <h2><?php if (is_archive()) {
     the_archive_title('<h2>', '</h2>');
 } else {
@@ -67,7 +68,7 @@ get_template_part('header-parts/header', 'bottom');
      </div>
 
      <?php elseif ($ptitle == "Our Work"): ?>
-      <div class="pricing">
+      <div class="headline-title">
       <h2><?php if (is_archive()) {
     the_archive_title('<h2>', '</h2>');
 } else {
@@ -77,20 +78,11 @@ get_template_part('header-parts/header', 'bottom');
 }?></h2>
      </div>
 
-<?php elseif ($ptitle == "Blog"): ?>
-      <div class="pricing">
-      <h2><?php if (is_archive()) {
-    the_archive_title('<h2>', '</h2>');
-} else {
-    echo '<h2>';
-    echo esc_html(get_the_title());
-    echo '</h2>';
-}?></h2>
-     </div>
+
 
 
 	 <?php elseif ($ptitle == "Article"): ?>
-      <div class="pricing">
+      <div class="headline-title">
       <h2><?php if (is_archive()) {
     the_archive_title('<h2>', '</h2>');
 } else {
@@ -102,7 +94,7 @@ get_template_part('header-parts/header', 'bottom');
 
 
      <?php elseif ($ptitle == "Privacy Policy"): ?>
-      <div class="pricing">
+      <div class="headline-title">
       <h2><?php if (is_archive()) {
     the_archive_title('<h2>', '</h2>');
 } else {
@@ -113,7 +105,7 @@ get_template_part('header-parts/header', 'bottom');
      </div>
 
       <?php elseif ($ptitle == "Request Info"): ?>
-      <div class="pricing">
+      <div class="headline-title">
       <h2><?php if (is_archive()) {
     the_archive_title('<h2>', '</h2>');
 } else {
@@ -124,7 +116,7 @@ get_template_part('header-parts/header', 'bottom');
      </div>
 
      <?php elseif ($ptitle == "Contact Us"): ?>
-      <div class="pricing book-demo">
+      <div class="headline-title book-demo">
       <h2><?php if (is_archive()) {
     the_archive_title('<h2>', '</h2>');
 } else {

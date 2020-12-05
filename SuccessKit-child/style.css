@@ -19,6 +19,7 @@ body {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
 }
 
 h1,
@@ -33,7 +34,7 @@ h5 {
 ul{
     list-style: disc;
     padding-left: 40px;
-    font-size: 22px;
+    /* font-size: 22px; */
     font-family: "Alegreya", serif !important;
 }
 li{
@@ -42,6 +43,7 @@ li{
 
 p {
     font-family: "Alegreya", serif !important;
+    font-size: 1em;
 }
 
 /* utility classes */
@@ -124,8 +126,6 @@ p {
     list-style-image: url("/wp-content/uploads/2020/08/bullet-icon-margin-bigger.png");
 }
 
-.price-list {
-}
 .price-list li {
     font-size: 1.25em;
     font-weight: 500;
@@ -186,6 +186,43 @@ p {
         margin: 0 0 0px !important;
     }
 }
+
+/* // util classes */
+
+/* components */
+
+.card{
+    border: 1px solid rgba(0,34,51,.1);
+    box-shadow: 0 8px 12px -8px rgba(0,34,51,.1);
+    border-radius: 0;
+    transition: 0.125s;
+}
+.card:hover{
+    box-shadow: 0 8px 16px -8px rgba(0,34,51,.2);
+}
+
+.card-eyebrow{
+    display: block;
+    margin-bottom: 12px;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 400;
+    color: #4c6470;
+    text-transform: uppercase;
+}
+
+.card-link {
+	margin-top: auto;
+	font-size: 16px;
+	line-height: 24px;
+	color: #0af;
+}
+.card-link:after{
+    font-family: "FontAwesome";
+    content: '\f054';
+    
+}
+/* // components */
 
 a.custom-logo-link img {
     width: 240px;
@@ -765,11 +802,11 @@ ul.table-list h5 {
     }
 }
 
-.pricing {
+.headline-title {
     width: 100%;
     float: left;
 }
-.pricing h2 {
+.headline-title h2 {
     font-size: 70px;
     text-transform: capitalize;
     font-weight: 100;

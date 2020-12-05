@@ -42,5 +42,5 @@ var checkExist = setInterval(function() {
         clearInterval(checkExist);
     }
 
- }, 200); // check every 100ms
+ }, 200);
  
