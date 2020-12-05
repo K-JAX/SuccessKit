@@ -43,7 +43,7 @@ do_action( 'wpmtst_before_view' );
 					<?php do_action( 'wpmtst_after_testimonial_content' ); ?>
 				</div>
 
-				<?php wpmtst_the_client(); ?>
+				<?php /* wpmtst_the_client(); */ ?>
 
 				<div class="clear"></div>
 

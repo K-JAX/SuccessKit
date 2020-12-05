@@ -27,7 +27,7 @@
  
 <div class="blog-auther-detail">
 <ul>
-<li><a href=""><?php echo get_the_author_meta('first_name');?></a> <img src="<?php echo site_url(); ?>/wp-content/uploads/2020/02/arrow-icon.png"></li>
+<li><a href=""><?php echo get_the_author_meta('display_name');?></a> <img src="<?php echo site_url(); ?>/wp-content/uploads/2020/02/arrow-icon.png"></li>
 <li><a href=""><?php echo  the_date(); ?></a> <img src="<?php echo site_url(); ?>/wp-content/uploads/2020/02/arrow-icon.png"></li>
 <!-- <li><a href=""><?php $categories = get_the_category();
 if ( ! empty( $categories ) ) {
@@ -73,7 +73,7 @@ if ( ! empty( $categories ) ) {
 </div>
 <div class="col-sm-12 col-md-12 col-xl-9 col-lg-9 ">
 <div class="about-content-team-message ">
-<h3><?php echo get_the_author_meta('first_name');?> <img src="<?php echo site_url(); ?>/wp-content/uploads/2020/02/arrow-icon.png" class="img-fluid"> Co-Founder &amp; CEO <a href="mailto:<?php 
+<h3><?php echo get_the_author_meta('display_name');?> <img src="<?php echo site_url(); ?>/wp-content/uploads/2020/02/arrow-icon.png" class="img-fluid">  <a href="mailto:<?php 
       echo $user_email = get_the_author_meta('user_email');
 ?>"><img src="<?php echo site_url(); ?>/wp-content/uploads/2020/02/envelop.png" class="envolope-text"></a></h3>
 <p><?php echo esc_html(get_the_author_meta('description'));?></p>
