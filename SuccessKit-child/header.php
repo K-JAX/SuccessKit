@@ -16,119 +16,16 @@
     <meta charset="<?php bloginfo('charset');?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-
-  <link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/owl.carousel.min.css" type="text/css"/>
-
-  <link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/owl.theme.default.min.css" type="text/css"/>
-
+    <link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/owl.carousel.min.css" type="text/css"/>
+    <link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/owl.theme.default.min.css" type="text/css"/>
     <?php wp_head();?>
 </head>
 
 <body <?php body_class();?>>
-<div class="header-bg">
-  <header class="header--fixed">
+  <header class="header--fixed pt-3">
+    <?php (get_theme_mod('educational_top_header_enable') == '1') ?? get_template_part('header-parts/header', 'top'); ?>
+    <?php get_template_part('header-parts/header', 'bottom'); ?>
+  </header>
+  <header class="header--fixed placeholder-only"></header>
 
-   <?php
-if (get_theme_mod('educational_top_header_enable') == '1') {
-    get_template_part('header-parts/header', 'top');
-}
-
-get_template_part('header-parts/header', 'bottom');
-
-?>
-
-</header>
-</div>
-<header class="header--fixed placeholder-only"></header>
-
-<?php if (is_home() || (!is_front_page()) || !(is_page_template('template-home.php'))): ?>
-<!-- Breadcrumb -->
-
-<?php 
-// starting to exclude individual templates from this
-// system one at a time with the following condition
-$ptitle = get_the_title();
- if (!is_page_template('page-templates/page-hero.php') && !is_page_template('page-templates/page-headline.php') && !($ptitle == "Blog")):
-?>
-<div class="top-block">
-
-  <div class="top-title" style="background: url(<?php if (has_header_image()): echo esc_url(get_header_image());endif;?>);">
-   <?php if (is_home()): ?>
-    <h2><?php bloginfo('name');?></h2>
-
-    <?php elseif ($ptitle == "Pricing"): ?>
-    <div class="headline-title">
-      <h2><?php if (is_archive()) {
-    the_archive_title('<h2>', '</h2>');
-} else {
-    echo '<h2>';
-    echo esc_html(get_the_title());
-    echo '</h2>';
-}?></h2>
-     </div>
-
-     <?php elseif ($ptitle == "Our Work"): ?>
-      <div class="headline-title">
-      <h2><?php if (is_archive()) {
-    the_archive_title('<h2>', '</h2>');
-} else {
-    echo '<h2>';
-    echo esc_html(get_the_title());
-    echo '</h2>';
-}?></h2>
-     </div>
-
-
-
-
-	 <?php elseif ($ptitle == "Article"): ?>
-      <div class="headline-title">
-      <h2><?php if (is_archive()) {
-    the_archive_title('<h2>', '</h2>');
-} else {
-    echo '<h2>';
-    echo esc_html(get_the_title());
-    echo '</h2>';
-}?></h2>
-     </div>
-
-
-     <?php elseif ($ptitle == "Privacy Policy"): ?>
-      <div class="headline-title">
-      <h2><?php if (is_archive()) {
-    the_archive_title('<h2>', '</h2>');
-} else {
-    echo '<h2>';
-    echo esc_html(get_the_title());
-    echo '</h2>';
-}?></h2>
-     </div>
-
-      <?php elseif ($ptitle == "Request Info"): ?>
-      <div class="headline-title">
-      <h2><?php if (is_archive()) {
-    the_archive_title('<h2>', '</h2>');
-} else {
-    echo '<h2>';
-    echo esc_html(get_the_title());
-    echo '</h2>';
-}?></h2>
-     </div>
-
-     <?php elseif ($ptitle == "Contact Us"): ?>
-      <div class="headline-title book-demo">
-      <h2><?php if (is_archive()) {
-    the_archive_title('<h2>', '</h2>');
-} else {
-    echo '<h2>';
-    echo esc_html(get_the_title());
-    echo '</h2>';
-}?></h2>
-     </div>
-<?php endif; ?>
-    <?php endif;?>
-  </div>
-
-
-</div>
-  <?php endif;?>
+  <!-- Breadcrumb -->

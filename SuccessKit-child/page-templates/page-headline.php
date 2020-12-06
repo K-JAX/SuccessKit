@@ -19,7 +19,7 @@ get_header(); ?>
 <div class="top-block">
     <div class="top-title">
         <?php while (have_posts()): the_post();?>
-        <div class="headline-title">
+        <div class="headline-title py-4">
             <h2><?php the_title();?></h2>
         </div>
     </div>

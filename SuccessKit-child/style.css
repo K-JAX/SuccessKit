@@ -1,5 +1,5 @@
 /*
-Theme Name: Educational Child
+Theme Name: Success Kit (child of Edu Theme)
 Theme URI: https://wpcodethemes.com/downloads/educational/
 Template: educational
 Author: wpcodethemes
@@ -20,6 +20,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 16px;
+    font-family: "Alegreya", serif;
 }
 
 h1,
@@ -27,22 +28,20 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: "Alegreya", serif !important;
+    font-family: "Alegreya", serif;
 }
 
 /* normalizing list items */
 ul{
     list-style: disc;
     padding-left: 40px;
-    /* font-size: 22px; */
-    font-family: "Alegreya", serif !important;
+    font-family: "Alegreya", serif;
 }
 li{
     margin-bottom: 1.1em;
 }
 
 p {
-    font-family: "Alegreya", serif !important;
     font-size: 1em;
 }
 
@@ -162,13 +161,7 @@ p {
     font-size: 18px;
 }
 
-.header-bg {
-    width: 100%;
-    float: left;
-    background-color: #548bff;
-    padding-top: 15px;
-    padding-bottom: 25px;
-}
+
 
 .hero-bg {
     width: 100%;
@@ -192,10 +185,12 @@ p {
 /* components */
 
 .card{
+    height: 426px;
     border: 1px solid rgba(0,34,51,.1);
     box-shadow: 0 8px 12px -8px rgba(0,34,51,.1);
     border-radius: 0;
     transition: 0.125s;
+    overflow: hidden;
 }
 .card:hover{
     box-shadow: 0 8px 16px -8px rgba(0,34,51,.2);
@@ -211,7 +206,12 @@ p {
     text-transform: uppercase;
 }
 
+.card p{
+    font-size: 14px;
+}
+
 .card-link {
+    font-size: 14px;
 	margin-top: auto;
 	font-size: 16px;
 	line-height: 24px;
@@ -220,8 +220,52 @@ p {
 .card-link:after{
     font-family: "FontAwesome";
     content: '\f054';
-    
+    font-size: 14px;
+    margin-left:4px;
 }
+
+.cat-nav .nav-item.active{
+    position:relative;
+}
+
+.cat-nav .nav-item.active:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -45%;
+    background-color: #548BFF;
+}
+
+.search-form{
+    position: relative;
+}
+
+.search-button{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: 1px solid #d6d6d6;
+    border-right: none;
+}
+
+.search-button:after{
+    content: '\f002';
+    font-family: "FontAwesome";
+    font-size: 1.25em;
+}
+
+.search-field{
+    font-size: 1.35em;
+    border: 1px solid #d6d6d6;
+    border-left: none;
+    color: #555 !important;
+    padding-left: 12px !important;
+}
+
+.search-field::placeholder{
+    color: #777 !important;
+}
+
 /* // components */
 
 a.custom-logo-link img {
@@ -229,9 +273,18 @@ a.custom-logo-link img {
     height: auto;
 }
 
+/* LegacyDelete Soon
+.header-bg {
+    width: 100%;
+    float: left;
+    background-color: #548bff;
+    padding-top: 15px;
+    padding-bottom: 25px;
+} */
+
 .header--fixed {
-    padding-bottom: 50px;
     z-index: 101;
+    background-color: #548bff;
 }
 
 .header--fixed .container {
@@ -734,14 +787,11 @@ input:focus {
 
 .header--fixed.placeholder-only {
     position: relative !important;
-    padding-bottom: 200px;
     background: #548bff;
     z-index: 0;
 }
-@media all and (max-width: 767px) {
-    .header--fixed.placeholder-only {
-        padding-bottom: 115px;
-    }
+.headroom--not-top+.placeholder-only {
+    height: 137px;
 }
 
 .post-template-default.single-post .header-bg {
@@ -793,7 +843,8 @@ ul.table-list h5 {
 }
 
 .top-title h2 {
-    top: 40%;
+    position: relative;
+    top: auto;
 }
 
 @media all and (max-width: 767px) {
@@ -802,14 +853,15 @@ ul.table-list h5 {
     }
 }
 
-.headline-title {
-    width: 100%;
-    float: left;
-}
+
 .headline-title h2 {
     font-size: 70px;
     text-transform: capitalize;
     font-weight: 100;
+    transform: none !important;
+}
+.headline-title * {
+    color: white;
 }
 
 .page-id-381 .header-bg {

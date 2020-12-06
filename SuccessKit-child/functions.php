@@ -237,3 +237,17 @@ function placeholder_comment_form_field($fields) {
 add_filter( 'comment_form_defaults', 'placeholder_comment_form_field' );
 
 add_post_type_support( 'page', 'excerpt' );
+
+
+function wpdocs_custom_excerpt_length( $length ) {
+    return 16;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+function prefix_category_title( $title ) {
+    if ( is_category() ) {
+        $title = trim(single_cat_title( '', false ));
+    }
+    return $title;
+}
+add_filter( 'get_the_archive_title', 'prefix_category_title' );

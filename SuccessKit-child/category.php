@@ -1,11 +1,13 @@
 <?php
 /*
-* Template Name: blog
+* Category Template
 */	
-get_header();	
+
+$ptitle = get_the_archive_title();
+get_header();
 $tp_args = array(
-    'title' => get_the_title(),
-    'desc' => get_the_excerpt()
+    'title' => get_the_archive_title(),
+    'desc' => category_description()
 );
 get_template_part('template-parts/blog', 'title', $tp_args );
 ?>
@@ -28,7 +30,7 @@ get_template_part('template-parts/blog', 'title', $tp_args );
         <ul class="nav sans-serif">
             <li class="nav-item <?php echo get_the_title() == 'Blog' ? 'active' : ''; ?>"><a href="/blog" class="nav-link">All</a></li>
             <?php foreach($categories as $category): ?>
-            <li class="nav-item <?php echo $category->name == get_the_title() ? 'active' : ''; ?>">
+            <li class="nav-item <?php echo $category->name == $ptitle ? 'active' : ''; ?>">
                 <a href="<?php echo  get_category_link( $category->term_id ); ?>" class="nav-link"><?php echo $category->name; ?></a>
             </li>
             <?php endforeach; ?>
@@ -40,17 +42,14 @@ get_template_part('template-parts/blog', 'title', $tp_args );
     </nav>
 </section>
 
-
-<?php if($categories != null): ?>
-<?php foreach($categories as $category): ?>
 <section class="container sans-serif my-5">
     <h2 class="sans-serif mb-4 pb-2" style="font-weight: 500; text-transform: initial;"><?php echo $category->name; ?></h2>
     <div class="post-feed">
     <?php
+        $cat_id = get_queried_object()->term_id;
         $args = array(
-            'posts_per_page' => 6,
             'post_type' => 'post',
-            'category__in' => array($category->term_id)
+            'category__in' => array($cat_id)
         );
 
          $query = new WP_Query( $args ); 
@@ -66,8 +65,7 @@ get_template_part('template-parts/blog', 'title', $tp_args );
          <?php endif; ?>
     </div>
 </section>
-<?php endforeach; ?>
-<?php endif; ?>
+
 
 
 <?php 
