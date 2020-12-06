@@ -13,7 +13,7 @@ if ( has_post_thumbnail() ){
     <li class="post col-lg-4 col-md-6">
         <a href="<?php echo get_the_permalink(); ?>" title="<?php echo 'Link to article - ' . get_the_title(); ?>" >
             <div class="card mb-5">
-                <img src="<?php echo $img_url; ?>" width=330 height=160 alt="" style="object-fit: cover;" class="card-img-top">
+                <img class="card-post-img" src="<?php echo $img_url; ?>" width=330 height=160 alt="" style="object-fit: cover;" class="card-img-top">
                 <div class="card-body d-flex flex-column">
                     <span class="card-eyebrow sans-serif"><?php echo get_the_category()[0]->cat_name; ?></span>
                     <h3 class="card-title h5 sans-serif" style="font-weight: 500;text-transform: initial;"><?php echo $title; ?></h3>
