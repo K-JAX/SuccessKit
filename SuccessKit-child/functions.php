@@ -251,3 +251,21 @@ function prefix_category_title( $title ) {
     return $title;
 }
 add_filter( 'get_the_archive_title', 'prefix_category_title' );
+
+
+function my_search_form( $form ) {
+	$form = '
+		<form role="search" method="get" id="searchform" class="search-form" action="' . home_url( '/' ) . '" >
+			<div class="input-group">
+				<div class="input-group-prepend">
+            		<button class="btn btn-outline-secondary search-button" type="submit"  value="'. esc_attr__( 'Search' ) .'" ></button>
+        		</div>
+				<label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label>
+    			<input class="search-field" type="text" value="' . get_search_query() . '" name="s" id="s" />
+    		</div>
+		</form>';
+
+    return $form;
+}
+
+add_filter( 'get_search_form', 'my_search_form', 100 );
