@@ -43,7 +43,6 @@ get_template_part('template-parts/blog', 'title', $tp_args );
 </section>
 
 <section class="container sans-serif my-5">
-    <h2 class="sans-serif mb-4 pb-2" style="font-weight: 500; text-transform: initial;"><?php echo $category->name; ?></h2>
     <div class="post-feed">
     <?php
         $cat_id = get_queried_object()->term_id;
