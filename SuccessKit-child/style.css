@@ -1241,8 +1241,8 @@ a.blog-link:hover h5 {
 .article-section img {
     display: inline-block;
     text-align: center;
-    width: 650px;
-    object-fit: cover;
+    width: auto;
+    /* object-fit: contain; */
     max-height: 50vh;
 }
 
