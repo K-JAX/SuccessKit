@@ -29,7 +29,7 @@ get_template_part('template-parts/blog', 'title', $tp_args );
             <li class="nav-item <?php echo get_the_title() == 'Blog' ? 'active' : ''; ?>"><a href="/blog" class="nav-link">All</a></li>
             <?php foreach($categories as $category): ?>
             <li class="nav-item <?php echo $category->name == get_the_title() ? 'active' : ''; ?>">
-                <a href="<?php echo  get_category_link( $category->term_id ); ?>" class="nav-link"><?php echo $category->name; ?></a>
+                <a href="<?php echo get_category_link( $category->term_id ); ?>" class="nav-link"><?php echo $category->name; ?></a>
             </li>
             <?php endforeach; ?>
         </ul>
@@ -64,6 +64,12 @@ get_template_part('template-parts/blog', 'title', $tp_args );
             <?php endwhile; ?>
             </ul>            
          <?php endif; ?>
+        
+        <div class="row justify-content-center">
+            <div class="theme-btn theme-border wide py-2">
+                <a href="<?php echo get_category_link( $category->term_id ); ?>" class="">See all <?php echo $category->name; ?> posts</a>
+            </div>
+        </div>
     </div>
 </section>
 <?php endforeach; ?>
