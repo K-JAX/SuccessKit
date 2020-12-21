@@ -67,7 +67,7 @@ get_template_part('template-parts/blog', 'title', $tp_args );
         
         <div class="row justify-content-center">
             <div class="theme-btn theme-border wide py-2">
-                <a href="<?php echo get_category_link( $category->term_id ); ?>" class="">See all <?php echo $category->name; ?> posts</a>
+                <a href="<?php echo get_category_link( $category->term_id ); ?>" >See all <?php echo $category->name; ?> posts</a>
             </div>
         </div>
     </div>
