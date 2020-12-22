@@ -13,7 +13,7 @@ function responsiveReposition(){
 
 function reposition(){
     var greenBttn = $('#greenBttn');
-    if(largerThan(992)){
+    if($(window).width() > 992){
         if($('.header--fixed .container > #greenBttn')[0] == undefined){
             greenBttn.detach().appendTo('.header--fixed .container');
             
@@ -25,15 +25,6 @@ function reposition(){
     }
 }
 
-function largerThan( breakpoint ){
-    if($(window).width() > breakpoint){
-        return true;
-    }else{
-        return false;
-    }
-
-}
-
 var checkExist = setInterval(function() {
     if ($('.leadinModal-theme-top').length) {
        $('body').addClass('hubspot-injected')
@@ -42,5 +33,5 @@ var checkExist = setInterval(function() {
         clearInterval(checkExist);
     }
 
- }, 200); // check every 100ms
+ }, 200);
  
