@@ -66,8 +66,8 @@ get_template_part('template-parts/blog', 'title', $tp_args );
          <?php endif; ?>
         
         <div class="row justify-content-center">
-            <div class="theme-btn theme-border wide py-2 text-center">
-                <a class="d-inline-block py-0" href="<?php echo get_category_link( $category->term_id ); ?>" >See all<br class="mobile-only" /> <?php echo $category->name; ?> posts</a>
+            <div class="theme-btn theme-border wide text-center">
+                <a class="d-inline-block" href="<?php echo get_category_link( $category->term_id ); ?>" >See all<br class="mobile-break" /> <?php echo $category->name; ?> posts</a>
             </div>
         </div>
     </div>
