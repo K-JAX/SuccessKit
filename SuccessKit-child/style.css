@@ -121,7 +121,19 @@ p {
 
 
 .theme-btn.wide a{
-    padding: 2em 7em;
+    padding: 0.5em 3em;
+    width: 450px;
+}
+
+@media all and (max-width: 768px){
+.theme-btn.wide{
+    width: 95%;
+}
+.theme-btn.wide a{
+    padding: 0em 1em;
+    width: 100%;
+}
+
 }
 
 .theme-grey-bg {
@@ -2987,6 +2999,10 @@ body .strong-view.wpmtst-default .wpmtst-testimonial-image img {
     display: block;
 }
 
+.mobile-break{
+    display: none;
+}
+
 @media all and (max-width: 767px){
     .single-feature-testimonial h3 *{
         display: block;
@@ -2998,6 +3014,10 @@ body .strong-view.wpmtst-default .wpmtst-testimonial-image img {
 
     .single-feature-testimonial .desktop-break{
         display: none;
+    }
+
+    .mobile-break{
+        display: inline-block;
     }
 
 }
