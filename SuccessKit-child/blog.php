@@ -10,7 +10,7 @@ $tp_args = array(
 get_template_part('template-parts/blog', 'title', $tp_args );
 ?>
 
-<section class="search-area my-5 d-none md-d-flex justify-content-center align-content-center">
+<section class="search-area my-5 d-none d-md-flex justify-content-center align-content-center">
     <?php get_template_part('template-parts/form', 'search'); ?>
 </section>
 <hr>
