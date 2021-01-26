@@ -1,0 +1,45 @@
+@import "./var.scss";
+
+html,
+body {
+    overflow-x: hidden;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    font-family: $serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $serif;
+    text-transform: initial;
+}
+
+/* normalizing list items */
+ul {
+    list-style: disc;
+    padding-left: 40px;
+    font-family: $serif;
+}
+li {
+    margin-bottom: 1.1em;
+}
+
+p {
+    font-size: 1em;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+}
