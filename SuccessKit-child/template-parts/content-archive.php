@@ -2,7 +2,7 @@
     /**
      * Template part for displaying list of posts
      */
-    $len   = 28;
+    $len   = 24;
     $title = strlen(get_the_title()) > $len ? substr(get_the_title(), 0, $len) . '...' : get_the_title();
     if (has_post_thumbnail()) {
         $img_url = get_the_post_thumbnail_url(get_the_id(), 'medium');
