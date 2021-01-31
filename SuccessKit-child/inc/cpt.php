@@ -21,7 +21,7 @@ if (!function_exists('register_case_study')) {
             'show_in_rest'      => true,
             'menu_position'     => 3,
             'menu_icon'         => 'dashicons-analytics',
-            'supports'          => array('title', 'editor', 'revisions', 'excerpt', 'thumbnail', 'custom-fields', 'post-formats'),
+            'supports'          => array('title', 'editor', 'revisions', 'excerpt', 'thumbnail', 'custom-fields', 'post-formats', 'page-attributes'),
             'has_archive'       => true,
         );
         register_post_type('case_study', $args);

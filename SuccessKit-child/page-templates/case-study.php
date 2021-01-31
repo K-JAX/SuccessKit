@@ -60,7 +60,9 @@ get_header();?>
 		<div class="post-feed">
 			<?php
                 $args = array(
-                    'posts_per_page' => 6,
+                    'posts_per_page' => 9,
+                    'orderby'        => 'menu_order',
+                    'order'          => 'ASC',
                     'post_type'      => 'case_study',
                 );
 
