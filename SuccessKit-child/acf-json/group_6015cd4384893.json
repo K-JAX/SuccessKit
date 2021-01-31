@@ -1,0 +1,23 @@
+{
+    "key": "group_6015cd4384893",
+    "title": "Post Taxonomy :: Written Case Studies",
+    "fields": [],
+    "location": [
+        [
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "category:uncategorized"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1612041660
+}

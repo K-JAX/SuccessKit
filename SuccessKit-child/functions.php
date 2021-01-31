@@ -259,9 +259,10 @@ add_filter('excerpt_length', 'wpdocs_custom_excerpt_length', 999);
 
 function prefix_category_title($title)
 {
-    if (is_category()) {
+    if (is_category() || is_tax()) {
         $title = trim(single_cat_title('', false));
     }
+
     return $title;
 }
 add_filter('get_the_archive_title', 'prefix_category_title');
@@ -284,4 +285,5 @@ function my_search_form($form)
 
 add_filter('get_search_form', 'my_search_form', 100);
 
+include_once 'inc/breadcrumbs.php';
 include_once 'inc/cpt.php';
