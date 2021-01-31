@@ -243,12 +243,6 @@ add_filter('comment_form_defaults', 'placeholder_comment_form_field');
 
 add_post_type_support('page', 'excerpt');
 
-function wpdocs_custom_excerpt_length($length)
-{
-    return 12;
-}
-add_filter('excerpt_length', 'wpdocs_custom_excerpt_length', 999);
-
 // function japanworm_shorten_title($title)
 // {
 //     $newTitle = substr($title, 0, 28); // Only take the first 20 characters
@@ -287,3 +281,9 @@ add_filter('get_search_form', 'my_search_form', 100);
 
 include_once 'inc/breadcrumbs.php';
 include_once 'inc/cpt.php';
+
+function wpdocs_custom_excerpt_length($length)
+{
+    return 12;
+}
+add_filter('excerpt_length', 'wpdocs_custom_excerpt_length', 999);

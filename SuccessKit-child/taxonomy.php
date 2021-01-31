@@ -85,7 +85,7 @@
 			<ul class="posts list-unstyled row flex-wrap">
 				<?php while ($query->have_posts()): $query->the_post();?>
 
-				<?php get_template_part('template-parts/content', 'archive');?>
+				<?php get_template_part('template-parts/content', 'case_study-archive');?>
 
 				<?php endwhile;?>
 			</ul>

@@ -13,17 +13,16 @@
 
 <li class="post col-lg-4 col-md-6">
 	<a href="<?php echo get_the_permalink(); ?>" title="<?php echo 'Link to article - ' . get_the_title(); ?>">
-		<div class="card mb-5">
-			<div class="embed-responsive embed-responsive-1by1">
+		<div class="case-study-thumbs">
+			<figure class="w-100 p-3">
 				<img class="card-post-img card-img-top embed-responsive-item" src="<?php echo $img_url; ?>" alt="">
-			</div>
-			<div class="card-body px-3 mt-3 pb-3 d-flex flex-column">
-				<span class="card-eyebrow sans-serif"><?php echo get_the_category()[0]->cat_name; ?></span>
-				<h3 class="card-title h5 sans-serif" style="font-weight: 500;text-transform: initial;">
-					<?php echo $title; ?></h3>
-				<p class="card-text sans-serif"><?php echo get_the_excerpt(); ?></p>
-				<span class="card-link sans-serif">Read more </span>
-			</div>
+				<figcaption class="py-2 d-flex flex-column">
+					<span class="card-eyebrow sans-serif"><?php echo get_the_category()[0]->cat_name; ?></span>
+					<h3 class="card-title h5 sans-serif" style="font-weight: 500;text-transform: initial;">
+						<?php echo $title; ?></h3>
+					<span class="card-link sans-serif">View Case Study </span>
+				</figcaption>
+			</figure>
 		</div>
 	</a>
 </li>
