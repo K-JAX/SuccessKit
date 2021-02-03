@@ -4,8 +4,6 @@
      */
 get_header();?>
 
-
-
 <div class="top-block">
 	<?php while (have_posts()): the_post();?>
 	<div class="top-title">

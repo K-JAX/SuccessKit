@@ -27,7 +27,27 @@
 									</h1>
 									<div class="text-white mb-4 h5 col-12"><?php the_excerpt();?></div>
 								</div>
+								<div class="row justify-content-center justify-content-lg-start mb-5 mb-md-0">
+									<?php
+                                        $link = get_field('hero_cta');
+                                        if ($link):
+                                            $link_url    = $link['url'];
+                                            $link_title  = $link['title'];
+                                            $link_target = $link['target'] ? $link['target'] : '_self';
+                                        ?>
+									<a class="theme-btn button" href="<?php echo esc_url($link_url); ?>"
+										target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+									<?php endif;?>
+									<?php
+    $pdf_upload = get_field('pdf_upload');
+    if ($pdf_upload):
+?>
+									<a class="theme-btn button" href="<?php echo esc_url($pdf_upload['url']); ?>">View
+										Case Study
+									</a>
+									<?php endif;?>
 
+								</div>
 							</div>
 						</div>
 
