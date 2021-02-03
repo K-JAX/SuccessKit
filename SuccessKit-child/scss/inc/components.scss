@@ -315,9 +315,25 @@
     .menu-item {
         padding: 0.75em 2em;
         margin-bottom: 0;
+        font-size: 1.2em;
+        font-weight: 600;
         @media all and (max-width: 767px) {
             width: 100%;
             text-align: center;
+        }
+        &:hover {
+            & > a {
+                color: orange;
+            }
+        }
+        &:last-of-type {
+            .dropdown-menu {
+                right: 0;
+                &:before {
+                    left: initial;
+                    right: 0;
+                }
+            }
         }
     }
     .dropdown-menu {
@@ -339,6 +355,7 @@
         border-radius: 20px;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
+
         @media all and (max-width: 767px) {
             width: 100%;
             left: 0;
@@ -391,7 +408,7 @@
     }
     .nav-col {
         position: relative;
-        min-width: 150px;
+        min-width: 200px;
         @media all and (max-width: 767px) {
             width: 100%;
         }

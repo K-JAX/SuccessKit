@@ -12,7 +12,7 @@ get_header();?>
         get_template_part('template-parts/blog', 'title', $tp_args);
     ?>
 
-	<section class="cat-area container mb-0">
+	<section class="cat-area container mt-2 mb-0">
 		<nav class="cat-nav d-flex justify-content-center">
 			<?php
                 $tax_args = array(

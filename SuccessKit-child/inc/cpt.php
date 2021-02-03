@@ -33,6 +33,20 @@ add_action('init', 'register_casestudy', 0);
 if (!function_exists('register_casestudy_tax')) {
     function register_casestudy_tax()
     {
+        $content_labels = array(
+            'name'          => _x('Content Types', 'tax general name', 'sk'),
+            'singular_name' => _x('Content Type', 'tax singular name', 'sk'),
+        );
+        $content_args = array(
+            'labels'            => $content_labels,
+            'description'       => __('Content type of case study. Video/PDF/etc..', 'sk'),
+            'hierarchical'      => true,
+            'public'            => true,
+            'show_in_rest'      => true,
+            'show_in_nav_menus' => true,
+        );
+        register_taxonomy('content_type', 'case_study', $content_args);
+
         $industry_labels = array(
             'name'          => _x('Industry Types', 'tax general name', 'sk'),
             'singular_name' => _x('Industry Type', 'tax singular name', 'sk'),
@@ -61,19 +75,6 @@ if (!function_exists('register_casestudy_tax')) {
         );
         register_taxonomy('subject', 'case_study', $subject_args);
 
-        $content_labels = array(
-            'name'          => _x('Content Types', 'tax general name', 'sk'),
-            'singular_name' => _x('Content Type', 'tax singular name', 'sk'),
-        );
-        $content_args = array(
-            'labels'            => $content_labels,
-            'description'       => __('Content type of case study. Video/PDF/etc..', 'sk'),
-            'hierarchical'      => true,
-            'public'            => true,
-            'show_in_rest'      => true,
-            'show_in_nav_menus' => true,
-        );
-        register_taxonomy('content_type', 'case_study', $content_args);
     }
 }
 // register_casestudy_tax();
