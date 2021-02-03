@@ -63,7 +63,6 @@
 	</section>
 	<hr class="mt-0">
 	<section class="container taxonomy-content-section sans-serif my-5 py-5">
-		<h1>Proof <?php echo $termId; ?></h1>
 		<div class="post-feed">
 			<?php
 
