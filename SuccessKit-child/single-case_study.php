@@ -42,8 +42,9 @@
     $pdf_upload = get_field('pdf_upload');
     if ($pdf_upload):
 ?>
-									<a class="theme-btn button" href="<?php echo esc_url($pdf_upload['url']); ?>">View
-										Case Study
+									<a class="theme-btn button" href="<?php echo esc_url($pdf_upload['url']); ?>"
+										target="_blank">
+										View Case Stuy
 									</a>
 									<?php endif;?>
 
@@ -68,16 +69,14 @@
 	<?php
         while (have_posts()):
             the_post();
+            if (!empty(get_the_content())): get_template_part('template-parts/content', 'case_study');endif;
 
-            get_template_part('template-parts/content', 'case_study');
-
-            //         // If comments are open or we have at least one comment, load up the comment template.
-            //         if ( comments_open() || get_comments_number() ) :
-            //             comments_template();
-            //     endif;
-
-        endwhile; // End of the loop.
+        endwhile;
     ?>
+
+
+
+
 </main>
 
 
