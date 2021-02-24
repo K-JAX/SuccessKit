@@ -62,8 +62,8 @@ if (!function_exists('register_casestudy_tax')) {
         register_taxonomy('industry_type', 'case_study', $industry_args);
 
         $subject_labels = array(
-            'name'          => _x('Subjects', 'tax general name', 'sk'),
-            'singular_name' => _x('Subject', 'tax singular name', 'sk'),
+            'name'          => _x('Subject Matters', 'tax general name', 'sk'),
+            'singular_name' => _x('Subject Matter', 'tax singular name', 'sk'),
         );
         $subject_args = array(
             'labels'            => $subject_labels,
