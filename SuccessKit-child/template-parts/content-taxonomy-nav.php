@@ -28,7 +28,7 @@
                 ?>
 				<a id="menu-item-dropdown-<?php echo $count; ?>" class="nav-link taxonomy-link dropdown-toggle" href="#"
 					aria-haspopup="true" aria-expanded="false"><?php echo $taxonomy->labels->menu_name; ?></a>
-				<ul id="<?php echo $taxonomy->name; ?>-menu" class="dropdown-menu overflow-visible"
+				<ul id="<?php echo $taxonomy->name; ?>-menu" class="dropdown-menu"
 					aria-labelledby="menu-item-dropdown-<?php echo $count; ?>" role="menu">
 					<?php
                         $term_count = 0;

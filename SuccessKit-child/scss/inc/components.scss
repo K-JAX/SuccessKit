@@ -406,6 +406,7 @@
             transition: 0.4s all, 0s padding;
             margin-top: 0px;
             max-height: 350px;
+            overflow: visible;
             @media all and (max-width: 767px) {
                 max-height: initial;
             }
