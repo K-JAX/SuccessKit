@@ -312,6 +312,8 @@
 /* menu nav item */
 
 .taxonomy-nav {
+    position: relative;
+    z-index: 1;
     .menu-item {
         padding: 0.75em 2em;
         margin-bottom: 0;
@@ -346,6 +348,7 @@
         border: none;
         margin-top: -10px;
         font-weight: 500;
+        z-index: -1;
         opacity: 0;
         transition: 0.4s all, 0s 0.75s padding;
         max-height: 0;
@@ -355,7 +358,11 @@
         border-radius: 20px;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-
+        &.sub {
+            left: calc(100% + 1.25em);
+            top: -1.25em;
+            border-bottom-left-radius: 0;
+        }
         @media all and (max-width: 767px) {
             width: 100%;
             left: 0;
@@ -375,6 +382,7 @@
         }
         li {
             margin-bottom: 0;
+            width: 100%;
             a {
                 font-size: 15px;
                 color: $blue;
@@ -393,6 +401,7 @@
     .dropdown:hover {
         & > .dropdown-menu {
             opacity: 1;
+            z-index: 1;
             padding: 1.25em 1.25em 0.65em;
             transition: 0.4s all, 0s padding;
             margin-top: 0px;
@@ -408,7 +417,7 @@
     }
     .nav-col {
         position: relative;
-        min-width: 200px;
+        min-width: 228px;
         @media all and (max-width: 767px) {
             width: 100%;
         }
@@ -436,7 +445,9 @@
         }
     }
 }
-
+#content_type-menu > .nav-col {
+    font-weight: bold;
+}
 /* //menu nav item */
 
 .taxonomy-content-section {
