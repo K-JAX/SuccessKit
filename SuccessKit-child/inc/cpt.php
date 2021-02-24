@@ -36,6 +36,7 @@ if (!function_exists('register_casestudy_tax')) {
         $content_labels = array(
             'name'          => _x('Content Types', 'tax general name', 'sk'),
             'singular_name' => _x('Content Type', 'tax singular name', 'sk'),
+            'menu_name'     => _x('Content Types', 'tax menu name', 'sk'),
         );
         $content_args = array(
             'labels'            => $content_labels,
@@ -48,8 +49,10 @@ if (!function_exists('register_casestudy_tax')) {
         register_taxonomy('content_type', 'case_study', $content_args);
 
         $industry_labels = array(
-            'name'          => _x('Industry Types', 'tax general name', 'sk'),
-            'singular_name' => _x('Industry Type', 'tax singular name', 'sk'),
+            'name'          => _x('Industries', 'tax general name', 'sk'),
+            'singular_name' => _x('Industry', 'tax singular name', 'sk'),
+            'menu_name'     => _x('Industry', 'tax menu name', 'sk'),
+
         );
         $industry_args = array(
             'labels'            => $industry_labels,
@@ -64,6 +67,7 @@ if (!function_exists('register_casestudy_tax')) {
         $subject_labels = array(
             'name'          => _x('Subject Matters', 'tax general name', 'sk'),
             'singular_name' => _x('Subject Matter', 'tax singular name', 'sk'),
+            'menu_name'     => _x('Subject Matter', 'tax menu name', 'sk'),
         );
         $subject_args = array(
             'labels'            => $subject_labels,
