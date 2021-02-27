@@ -42,12 +42,11 @@
 					<li class="dropdown<?php echo ($term_children ? ' menu-item-has-children' : ''); ?>">
 						<a class="nav-link dropdown-toggle"
 							href="<?php echo get_term_link($term); ?>"><?php echo $term->name; ?></a>
-						<?php if ($term_children): ?>
+						<?php /* if ($term_children): ?>
 						<ul class="sub dropdown-menu">
 							<div class="nav-col">
-								<?php /*print_r($term_children); */?>
 								<?php foreach ($term_children as $term_child_id):
-            $term_child = get_term_by('id', $term_child_id, $taxonomy->name);?>
+                                            $term_child = get_term_by('id', $term_child_id, $taxonomy->name);?>
 								<li>
 									<a class="nav-link"
 										href="<?php echo get_term_link($term_child); ?>"><?php echo $term_child->name; ?></a>
@@ -55,7 +54,7 @@
 								<?php endforeach;?>
 							</div>
 						</ul>
-						<?php endif;?>
+						<?php endif; */?>
 					</li><?php echo $term_count % $col_total == $col_total - 1 ? '</div>' : '' ?>
 					<?php $term_count++;endif;endforeach;?>
 				</ul>

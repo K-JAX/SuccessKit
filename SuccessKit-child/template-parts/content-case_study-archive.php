@@ -12,7 +12,11 @@
 ?>
 
 <li class="post col-lg-4 col-md-6">
-	<a href="<?php echo get_the_permalink(); ?>" title="<?php echo 'Link to article - ' . get_the_title(); ?>">
+	<?php
+        $pdf_upload = get_field('pdf_upload');
+        if ($pdf_upload):
+    ?>
+	<a href="<?php echo esc_url($pdf_upload['url']); ?>" title="<?php echo 'Link to article - ' . get_the_title(); ?>">
 		<div class="case-study-thumbs">
 			<figure class="w-100 p-3">
 				<img class="card-post-img card-img-top embed-responsive-item" src="<?php echo $img_url; ?>" alt="">
@@ -25,4 +29,5 @@
 			</figure>
 		</div>
 	</a>
+	<?php endif;?>
 </li>

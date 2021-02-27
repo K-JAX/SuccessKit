@@ -44,7 +44,7 @@
 ?>
 									<a class="theme-btn button" href="<?php echo esc_url($pdf_upload['url']); ?>"
 										target="_blank">
-										View Case Stuy
+										View Case Study
 									</a>
 									<?php endif;?>
 
