@@ -40,7 +40,7 @@
 
 </footer>
 
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
 <script type="text/javascript" src="<?php bloginfo('template_url');?>/assets/js/owl.carousel.min.js"
 	crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>

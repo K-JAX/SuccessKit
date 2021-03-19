@@ -14,7 +14,7 @@ get_header();?>
 				<div class="pt-4">
 					<div class="row mt-5 mb-2 justify-content-between">
 						<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex align-items-center mb-5 mb-lg-0">
-							<div class="slider-text text-center text-md-left">
+							<div class="slider-text text-center text-md-left col-12">
 								<div class="row ">
 									<h1 class="display-3 text-white font-weight-light mb-4">
 										<?php if (class_exists('ACF')):

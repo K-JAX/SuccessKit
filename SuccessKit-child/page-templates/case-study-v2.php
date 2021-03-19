@@ -1,6 +1,6 @@
 <?php
     /*
-     * Template Name: Case Study
+     * Template Name: Case Study v2
      */
 get_header();?>
 <main>
