@@ -9,6 +9,16 @@
     } else {
         $img_url = 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=640&q=80';
     }
+	// $terms = wp_get_post_terms( get_the_ID(), 'content_type');
+	// $terms = get_the_terms(get_the_ID(), 'content_type');
+	$terms = get_the_terms( $post->ID, 'content_type' );
+	$term = $terms[0];
+
+	$singular_label = 'Case Study';
+	if (get_field('singular_label', $term)){
+		$singular_label = get_field('singular_label', $term);
+	}
+	
 ?>
 
 <li class="post col-lg-4 col-md-6">
@@ -25,7 +35,7 @@
 					<span class="card-eyebrow sans-serif"><?php echo get_the_category()[0]->cat_name; ?></span>
 					<h3 class="card-title h5 sans-serif" style="font-weight: 500;text-transform: initial;">
 						<?php echo $title; ?></h3>
-					<span class="card-link sans-serif">View Case Study </span>
+					<span class="card-link sans-serif">View <u class="font-weight-bolder"><?php echo $singular_label; ?></u></span>
 				</figcaption>
 			</figure>
 		</div>
