@@ -256,7 +256,7 @@ function prefix_category_title($title)
 add_filter('get_the_archive_title', 'prefix_category_title');
 
 function my_search_form($form)
-{
+{ 
     $form = '
 		<form role="search" method="get" id="searchform" class="search-form" action="' . home_url('/') . '" >
 			<div class="input-group">
