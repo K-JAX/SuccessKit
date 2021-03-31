@@ -84,50 +84,50 @@ $(function() {
 
 })
 
-// $('.owl-carousel').owlCarousel({
-// 	center:true,
-//     loop:true,
-//     margin:50,
-//     nav:false,
-// 	autoplay:true,
-//     autoplayTimeout:3000,
-//     responsive:{
-//         0:{
-//             items:1
-//         },
-//         600:{
-//             items:3
-//         },
-//         1000:{
-//             items:3
-//         }
-//     }
-// });
+$('.owl-carousel').owlCarousel({
+	center:true,
+    loop:true,
+    margin:50,
+    nav:false,
+	autoplay:true,
+    autoplayTimeout:3000,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:3
+        }
+    }
+});
 
 
-// jQuery(document).ready(function(){
-// jQuery('.loop').owlCarousel({
-//    center: true,
-//    items:2,
-//    loop:true,
-//    margin:10,
-// autoWidth:true,
-// autoplay:true,
-// autoplayTimeout:4000,
-//   responsive:{
-//        0:{
-//            items:3,
-//            nav:false,
-// margin:10,
-//        },
-//        600:{
-//            items:3,
-//            nav:false
-//        }
+jQuery(document).ready(function(){
+jQuery('.loop').owlCarousel({
+   center: true,
+   items:2,
+   loop:true,
+   margin:10,
+autoWidth:true,
+autoplay:true,
+autoplayTimeout:4000,
+  responsive:{
+       0:{
+           items:3,
+           nav:false,
+margin:10,
+       },
+       600:{
+           items:3,
+           nav:false
+       }
 
-//    }
-// });
-// });
+   }
+});
+});
 
 $('.dropdown-btn').on('click', function(event) {
 	event.preventDefault();

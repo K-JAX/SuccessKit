@@ -319,6 +319,14 @@
         margin-bottom: 0;
         font-size: 1.2em;
         font-weight: 600;
+        .dropdown-toggle {
+            position: relative;
+            &:after {
+                display: inline-block;
+                content: "";
+                margin-left: 0.5em;
+            }
+        }
         @media all and (max-width: 767px) {
             width: 100%;
             text-align: center;

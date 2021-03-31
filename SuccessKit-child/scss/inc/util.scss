@@ -126,3 +126,35 @@
         font-weight: 700;
     }
 }
+
+.spinner {
+    &:after {
+        content: "";
+        display: inline-block;
+        position: relative;
+        width: 25px;
+        height: 25px;
+        border: 2px solid black;
+        border-left: none;
+        border-right: none;
+        border-radius: 100%;
+        animation: spin 0.85s infinite;
+        margin-left: 15px;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(25deg);
+    }
+    100% {
+        transform: rotate(385deg);
+    }
+}
+
+#more_posts {
+    &[disabled="disabled"] {
+        transition: 0.25s;
+        opacity: 0.15;
+    }
+}

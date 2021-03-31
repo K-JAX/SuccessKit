@@ -1,5 +1,5 @@
-// Success Kit Scripts
-// Author: Kevin Garubba
+// // Success Kit Scripts
+// // Author: Kevin Garubba
 
 $(function () {
     responsiveReposition();
@@ -43,3 +43,56 @@ function reposition() {
 //         clearInterval(checkExist);
 //     }
 // }, 200);
+
+jQuery(function ($) {
+    var ppp = 9; // Post per page
+    var pageNumber = 1;
+    console.log(ajax_posts.max_page);
+
+    function load_posts() {
+        pageNumber++;
+        var str =
+            "&pageNumber=" +
+            pageNumber +
+            "&ppp=" +
+            ppp +
+            "&action=more_post_ajax";
+        $.ajax({
+            type: "POST",
+            dataType: "html",
+            url: ajax_posts.ajaxurl,
+            data: str,
+            success: function (data) {
+                var $data = $(data);
+                if ($data.length) {
+                    if (pageNumber == ajax_posts.max_page) {
+                        $("#more_posts").attr("disabled", true).remove();
+                    }
+                    $("#ajax-posts").append($data);
+                    $("#more_posts")
+                        .attr("disabled", false)
+                        .text("Load more")
+                        .removeClass("spinner");
+                } else {
+                    $("#more_posts").attr("disabled", true).hide();
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                $loader.html(
+                    jqXHR + " :: " + textStatus + " :: " + errorThrown
+                );
+            },
+        });
+        return false;
+    }
+
+    $("#more_posts").on("click", function () {
+        // When btn is pressed.
+        $("#more_posts")
+            .attr("disabled", true)
+            .text("Loading")
+            .addClass("spinner"); // Disable the button, temp.
+        load_posts();
+        $(this).parent("#more-post-container").insertAfter("#ajax-posts"); // Move the 'Load More' button to the end of the the newly added posts.
+    });
+});

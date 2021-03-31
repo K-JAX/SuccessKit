@@ -40,7 +40,7 @@
                                 $term_children = get_term_children($term->term_id, $taxonomy->name);
                             ?>
 					<li class="dropdown<?php echo ($term_children ? ' menu-item-has-children' : ''); ?>">
-						<a class="nav-link dropdown-toggle"
+						<a class="nav-link"
 							href="<?php echo get_term_link($term); ?>"><?php echo $term->name; ?></a>
 						<?php /* if ($term_children): ?>
 						<ul class="sub dropdown-menu">

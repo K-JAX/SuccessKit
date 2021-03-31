@@ -20,7 +20,7 @@
 
 	<?php wp_reset_postdata();?>
 	<hr class="mt-0">
-	<section class="container taxonomy-content-section sans-serif my-5 py-5">
+	<section class="container taxonomy-content-section sans-serif mt-4 pt-1 mb-5 pb-1">
 		<div class="post-feed">
 			<?php
 

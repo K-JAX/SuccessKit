@@ -27,15 +27,7 @@ if (!function_exists('chld_thm_cfg_parent_css')):
 endif;
 add_action('wp_enqueue_scripts', 'chld_thm_cfg_parent_css', 10);
 
-if (!function_exists('successkit_scripts')):
-    function successkit_scripts()
-{
-        // wp_deregister_script('jquery');
-        // wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', array(), null, true);
-        wp_enqueue_script('scriptjs', trailingslashit(get_stylesheet_directory_uri()) . 'assets/js/script.js', array(), rand(111, 9999), true);
-    }
-endif;
-add_action('wp_enqueue_scripts', 'successkit_scripts', 10);
+
 
 require get_stylesheet_directory() . '/inc/wp-bootstrap-navwalker.php';
 
@@ -289,3 +281,85 @@ function wpdocs_custom_excerpt_length($length)
     return 12;
 }
 add_filter('excerpt_length', 'wpdocs_custom_excerpt_length', 999);
+
+
+add_action('wp_enqueue_scripts', 'remove_my_action');
+function remove_my_action(){
+    remove_action('wp_enqueue_scripts', 'educational_scripts');
+}
+
+if (!function_exists('successkit_scripts')):
+    function successkit_scripts(){
+        
+        $args = array(
+            'suppress_filters' => true,
+            'post_type' => 'case_study',
+            'posts_per_page' => $ppp,
+            'paged'    => $page,
+            'orderby'        => 'menu_order',
+            'order'          => 'ASC',
+            'post_type'      => 'case_study',
+            
+        );
+    
+        // $loop = new WP_Query($args);
+        query_posts( $args );
+    
+        
+        global $wp_query; 
+        wp_deregister_script('iso-jquery');
+        wp_dequeue_script( 'iso-jquery');
+        wp_deregister_script('jquery');
+        wp_register_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js');
+        wp_enqueue_script('jquery');
+
+        wp_register_script('scriptjs', trailingslashit(get_stylesheet_directory_uri()) . 'assets/js/script.js', array('jquery'));
+
+        wp_localize_script( 'scriptjs', 'ajax_posts', array(
+            'ajaxurl' => admin_url( 'admin-ajax.php' ),
+            'noposts' => __('No older posts found', 'sk'),
+            'posts' => json_encode( $wp_query->query_vars ), // everything about your loop is here
+            'current_page' => $wp_query->query_vars['paged'] ? $wp_query->query_vars['paged'] : 1,
+            'max_page' => $wp_query->max_num_pages
+        ));	
+        
+        wp_enqueue_script('scriptjs');
+    }
+endif;
+add_action('wp_enqueue_scripts', 'successkit_scripts', 10);
+
+
+function more_post_ajax(){
+
+    $ppp = (isset($_POST["ppp"])) ? $_POST["ppp"] : 9;
+    $page = (isset($_POST['pageNumber'])) ? $_POST['pageNumber'] : 0;
+
+    header("Content-Type: text/html");
+
+    $args = array(
+        'suppress_filters' => true,
+        'post_type' => 'case_study',
+        'posts_per_page' => $ppp,
+        'paged'    => $page,
+        'orderby'        => 'menu_order',
+        'order'          => 'ASC',
+        'post_type'      => 'case_study',
+        
+    );
+
+    // $loop = new WP_Query($args);
+    query_posts( $args );
+
+    global $wp_query;
+
+    if (have_posts()) :  while (have_posts()) : the_post();
+        get_template_part('template-parts/content', 'case_study-archive');
+    endwhile;
+    endif;
+    wp_reset_postdata();
+    
+    die();
+}
+
+add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
+add_action('wp_ajax_more_post_ajax', 'more_post_ajax');

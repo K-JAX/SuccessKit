@@ -1,6 +1,6 @@
 {
     "key": "group_600f404b977b0",
-    "title": "Page Template :: Hero Page",
+    "title": "Page Template :: Hero Page && Post Type:: Case Study",
     "fields": [
         {
             "key": "field_600f40701b3c3",
@@ -35,6 +35,25 @@
             "min_size": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_6063494038cc3",
+            "label": "Video Link",
+            "name": "video_link",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -61,5 +80,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1612394215
+    "modified": 1617119579
 }
