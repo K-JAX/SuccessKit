@@ -324,6 +324,7 @@ if (!function_exists('successkit_scripts')):
         ));	
         
         wp_enqueue_script('scriptjs');
+        wp_reset_query();
     }
 endif;
 add_action('wp_enqueue_scripts', 'successkit_scripts', 10);
