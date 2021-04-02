@@ -19,35 +19,32 @@ get_header();
 	<section class="container taxonomy-content-section sans-serif mt-4 pt-1 mb-5 pb-1">
 		<div class="post-feed">
 			<?php
-                $args = array(
-                    'posts_per_page' => 9,
-                    'orderby'        => 'menu_order',
-                    'order'          => 'ASC',
-                    'post_type'      => 'case_study',
-                    'paged'          => 1,
-                );
+            $args = array(
+                'post_type' => 'case_study',
+                'posts_per_page' => 9,
+                'orderby'        => array('menu_order' => 'ASC', 'post_date' => "DESC"),
+            );
 
-                query_posts( $args );
- 
-                global $wp_query;
-            if (have_posts()): ?>
+            $query = new WP_QUERY( $args );
+
+            // global $wp_query;
+            if ($query->have_posts()): ?>
 
 			<ul id="ajax-posts" class="posts list-unstyled row flex-wrap">
-				<?php while (have_posts()): the_post();?>
+				<?php while ($query->have_posts()): $query->the_post();?>
 
 				<?php get_template_part('template-parts/content', 'case_study-archive');?>
 
-				<?php endwhile; wp_reset_postdata(); ?>
-                <?php if ($wp_query->max_num_pages > 1): ?>
-                <div id="more-post-container" class="row col-12 mt-2 justify-content-center sans-serif">
-                    <button id="more_posts" class="theme-btn d-flex justify-content-center theme-border wide text-center h4 col-9">
-                        Load more
-                    </button>
-                </div>
-                <?php endif; ?>
+				<?php endwhile;  ?>
+
+                <?php wp_reset_postdata(); ?>
 			</ul>
 			<?php endif;?>
-
+            <div id="more-post-container" class="row col-12 mt-2 justify-content-center sans-serif">
+                <button id="more_posts" class="theme-btn d-flex justify-content-center theme-border wide text-center h4 col-9">
+                    Load more
+                </button>
+            </div>
 		</div>
 	</section>
 </main>

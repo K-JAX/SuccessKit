@@ -290,21 +290,15 @@ function remove_my_action(){
 
 if (!function_exists('successkit_scripts')):
     function successkit_scripts(){
-        
+
         $args = array(
-            'suppress_filters' => true,
             'post_type' => 'case_study',
-            'posts_per_page' => $ppp,
-            'paged'    => $page,
             'orderby'        => 'menu_order',
             'order'          => 'ASC',
-            'post_type'      => 'case_study',
-            
         );
     
         // $loop = new WP_Query($args);
         query_posts( $args );
-    
         
         global $wp_query; 
         wp_deregister_script('iso-jquery');
@@ -318,8 +312,6 @@ if (!function_exists('successkit_scripts')):
         wp_localize_script( 'scriptjs', 'ajax_posts', array(
             'ajaxurl' => admin_url( 'admin-ajax.php' ),
             'noposts' => __('No older posts found', 'sk'),
-            'posts' => json_encode( $wp_query->query_vars ), // everything about your loop is here
-            'current_page' => $wp_query->query_vars['paged'] ? $wp_query->query_vars['paged'] : 1,
             'max_page' => $wp_query->max_num_pages
         ));	
         
@@ -333,7 +325,8 @@ add_action('wp_enqueue_scripts', 'successkit_scripts', 10);
 function more_post_ajax(){
 
     $ppp = (isset($_POST["ppp"])) ? $_POST["ppp"] : 9;
-    $page = (isset($_POST['pageNumber'])) ? $_POST['pageNumber'] : 0;
+    $page = (isset($_POST['pageNumber'])) ? $_POST['pageNumber'] : 1;
+    $offset = (isset($_POST['offset'])) ? $_POST['offset'] : 9;
 
     header("Content-Type: text/html");
 
@@ -341,11 +334,9 @@ function more_post_ajax(){
         'suppress_filters' => true,
         'post_type' => 'case_study',
         'posts_per_page' => $ppp,
-        'paged'    => $page,
-        'orderby'        => 'menu_order',
-        'order'          => 'ASC',
-        'post_type'      => 'case_study',
-        
+        // 'paged'    => $page,
+        'offset' => $offset,
+        'orderby'        => array('menu_order' => 'ASC', 'post_date' => "DESC"),
     );
 
     // $loop = new WP_Query($args);
@@ -357,7 +348,7 @@ function more_post_ajax(){
         get_template_part('template-parts/content', 'case_study-archive');
     endwhile;
     endif;
-    wp_reset_postdata();
+    wp_reset_query();
     
     die();
 }

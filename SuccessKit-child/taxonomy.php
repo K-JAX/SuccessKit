@@ -34,6 +34,7 @@
                             'terms'    => $termId,
                         ),
                     ),
+                    'orderby'        => array('menu_order' => 'ASC', 'post_date' => "DESC"),
                 );
 
                 $query = new WP_Query($args);
@@ -47,7 +48,11 @@
 				<?php endwhile;?>
 			</ul>
 			<?php endif;?>
-
+            <div id="more-post-container" class="row col-12 mt-2 justify-content-center sans-serif">
+                <button id="more_posts" class="theme-btn d-flex justify-content-center theme-border wide text-center h4 col-9">
+                    Load more
+                </button>
+            </div>
 		</div>
 	</section>
 </main>

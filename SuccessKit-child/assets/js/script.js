@@ -47,13 +47,14 @@ function reposition() {
 jQuery(function ($) {
     var ppp = 9; // Post per page
     var pageNumber = 1;
-    console.log(ajax_posts.max_page);
-
+    // console.log(ajax_posts.max_page);
+    var str;
     function load_posts() {
         pageNumber++;
-        var str =
-            "&pageNumber=" +
-            pageNumber +
+
+        str =
+            "&offset=" +
+            (pageNumber * ppp + 1) +
             "&ppp=" +
             ppp +
             "&action=more_post_ajax";
@@ -63,6 +64,8 @@ jQuery(function ($) {
             url: ajax_posts.ajaxurl,
             data: str,
             success: function (data) {
+                console.log(pageNumber + " of " + ajax_posts.max_page);
+
                 var $data = $(data);
                 if ($data.length) {
                     if (pageNumber == ajax_posts.max_page) {
