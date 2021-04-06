@@ -302,7 +302,10 @@
             box-shadow: 1px 5px 6px 4px rgba(0, 0, 0, 0.25);
         }
         img {
-            height: auto;
+            height: 222px;
+            @media all and (max-width: 767px) {
+                height: auto;
+            }
         }
     }
 }

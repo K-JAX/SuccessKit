@@ -30,6 +30,7 @@
 					aria-haspopup="true" aria-expanded="false"><?php echo $taxonomy->labels->menu_name; ?></a>
 				<ul id="<?php echo $taxonomy->name; ?>-menu" class="dropdown-menu"
 					aria-labelledby="menu-item-dropdown-<?php echo $count; ?>" role="menu">
+
 					<?php
                         $term_count = 0;
                         $col_total  = $taxonomy->name === 'industry_type' ? 7 : 6;
@@ -37,6 +38,13 @@
                             $parent = $term->parent;
                             if ($parent == '0'):
                                 echo $term_count % $col_total == 0 ? '<div class="nav-col">' : '';
+								if($taxonomy->name === 'content_type' && $term_count == 0): 
+							?>
+							<li class="dropdown">
+								<a class="nav-link" href="/our-work">All</a>
+							</li>
+							<?php
+								endif;
                                 $term_children = get_term_children($term->term_id, $taxonomy->name);
                             ?>
 					<li class="dropdown<?php echo ($term_children ? ' menu-item-has-children' : ''); ?>">

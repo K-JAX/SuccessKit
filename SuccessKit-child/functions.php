@@ -290,17 +290,32 @@ function remove_my_action(){
 
 if (!function_exists('successkit_scripts')):
     function successkit_scripts(){
+        // global $wp_query; 
 
-        $args = array(
-            'post_type' => 'case_study',
-            'orderby'        => 'menu_order',
-            'order'          => 'ASC',
-        );
+        $ppp = (isset($_POST["ppp"])) ? $_POST["ppp"] : 9;
+        $page = (isset($_POST['pageNumber'])) ? $_POST['pageNumber'] : 0;
+        $offset = (isset($_POST['offset'])) ? $_POST['offset'] : 9;
+        $tax = (isset($_POST['tax'])) || $_POST['tax'] !== 'undefined' ? $_POST['tax'] : 'all';
+        $term = (isset($_POST['term']))  || $_POST['tax'] !== 'undefined' ? $_POST['term'] : 'all';
     
-        // $loop = new WP_Query($args);
-        query_posts( $args );
+        $termArray = $term !== 'all' ? array(
+            'taxonomy'       => $tax,
+            'field'    => 'term_id',
+            'terms'    => $term,
+        ) : '';
+    
+    
+        $args = array(
+            'suppress_filters' => true,
+            'no_found_rows' => true,
+            'post_type' => 'case_study',
+            'posts_per_page' => $ppp,
+            'offset' => $offset,
+            'tax_query'      => array(
+                $termArray
+            ),
+        );
         
-        global $wp_query; 
         wp_deregister_script('iso-jquery');
         wp_dequeue_script( 'iso-jquery');
         wp_deregister_script('jquery');
@@ -323,26 +338,26 @@ add_action('wp_enqueue_scripts', 'successkit_scripts', 10);
 
 
 function more_post_ajax(){
+    // global $wp_query;
 
     $ppp = (isset($_POST["ppp"])) ? $_POST["ppp"] : 9;
-    $page = (isset($_POST['pageNumber'])) ? $_POST['pageNumber'] : 1;
+    $page = (isset($_POST['pageNumber'])) ? $_POST['pageNumber'] : 0;
     $offset = (isset($_POST['offset'])) ? $_POST['offset'] : 9;
+
 
     header("Content-Type: text/html");
 
     $args = array(
         'suppress_filters' => true,
+        'no_found_rows' => true,
         'post_type' => 'case_study',
         'posts_per_page' => $ppp,
-        // 'paged'    => $page,
         'offset' => $offset,
-        'orderby'        => array('menu_order' => 'ASC', 'post_date' => "DESC"),
     );
 
     // $loop = new WP_Query($args);
     query_posts( $args );
 
-    global $wp_query;
 
     if (have_posts()) :  while (have_posts()) : the_post();
         get_template_part('template-parts/content', 'case_study-archive');
@@ -350,7 +365,7 @@ function more_post_ajax(){
     endif;
     wp_reset_query();
     
-    die();
+    die;
 }
 
 add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');

@@ -47,16 +47,27 @@ function reposition() {
 jQuery(function ($) {
     var ppp = 9; // Post per page
     var pageNumber = 1;
-    // console.log(ajax_posts.max_page);
     var str;
-    function load_posts() {
+    function load_posts(tax, term) {
         pageNumber++;
+        if (tax === undefined) {
+            tax = "all";
+        }
+        if (term === undefined) {
+            term = "all";
+        }
 
         str =
             "&offset=" +
             (pageNumber * ppp + 1) +
             "&ppp=" +
             ppp +
+            "&pageNumber=" +
+            pageNumber +
+            "&tax=" +
+            tax +
+            "&term=" +
+            term +
             "&action=more_post_ajax";
         $.ajax({
             type: "POST",
@@ -91,11 +102,14 @@ jQuery(function ($) {
 
     $("#more_posts").on("click", function () {
         // When btn is pressed.
+        var tax = $(this).attr("data-tax");
+        var term = $(this).attr("data-term");
+        // console.log("tax: " + tax + ", term: " + term);
         $("#more_posts")
             .attr("disabled", true)
             .text("Loading")
             .addClass("spinner"); // Disable the button, temp.
-        load_posts();
+        load_posts(tax, term);
         $(this).parent("#more-post-container").insertAfter("#ajax-posts"); // Move the 'Load More' button to the end of the the newly added posts.
     });
 });

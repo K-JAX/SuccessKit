@@ -28,7 +28,7 @@
 		$link = $pdf_upload ? $pdf_upload['url'] : $video_link;
 ?>
 	<li class="post col-lg-4 col-md-6">
-		<a href="<?php echo esc_url($video_link); ?>" title="<?php echo 'Link to article - ' . get_the_title(); ?>"
+		<a href="<?php echo esc_url($link); ?>" title="<?php echo 'Link to article - ' . get_the_title(); ?>"
 			target="_blank">
 			<div class="case-study-thumbs">
 				<figure class="w-100 p-3">
