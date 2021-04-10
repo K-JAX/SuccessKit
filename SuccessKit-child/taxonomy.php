@@ -18,26 +18,25 @@
         get_template_part('template-parts/content', 'taxonomy-nav');
     ?>
 
-	<?php wp_reset_postdata();?>
 	<hr class="mt-0">
 	<section class="container taxonomy-content-section sans-serif mt-4 pt-1 mb-5 pb-1">
 		<div class="post-feed">
 			<?php
 
-                $args = array(
-                    'posts_per_page' => -1,
-                    'post_type'      => 'case_study',
-                    'tax_query'      => array(
-                        array(
-                            'taxonomy' => $tax,
-                            'field'    => 'term_id',
-                            'terms'    => $termId,
-                        ),
+            $args = array(
+                'posts_per_page' => 9,
+                'post_type'      => 'case_study',
+                'tax_query'      => array(
+                    array(
+                        'taxonomy' => $tax,
+                        'field'    => 'term_id',
+                        'terms'    => $termId,
                     ),
-                    'orderby'        => array('menu_order' => 'ASC', 'post_date' => "DESC"),
-                );
+                ),
+                'orderby'        => array('menu_order' => 'ASC', 'post_date' => "DESC"),
+            );
 
-                $query = new WP_Query($args);
+            $query = new WP_Query($args);
             if ($query->have_posts()): ?>
 
 			<ul id="ajax-posts" class="posts list-unstyled row flex-wrap">
@@ -48,14 +47,13 @@
 				<?php endwhile;?>
 			</ul>
 			<?php endif;?>
-            <?php /* echo $query->max_num_pages; ?>
             <?php if($query->max_num_pages > 1): ?>
             <div id="more-post-container" class="row col-12 mt-2 justify-content-center sans-serif">
                 <button id="more_posts" data-tax="<?php echo $tax; ?>" data-term="<?php echo $termId; ?>" class="theme-btn d-flex justify-content-center theme-border wide text-center h4 col-9">
                     Load more
                 </button>
             </div>
-            <?php endif; */ ?>
+            <?php endif; ?>
             <?php wp_reset_postdata(); ?>
 
 		</div>
