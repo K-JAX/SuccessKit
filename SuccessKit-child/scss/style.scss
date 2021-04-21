@@ -12,6 +12,7 @@ Updated: 2020-02-13 10:43:51
 @import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,700;1,900&family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400&display=swap");
 @import "./inc/var";
 @import "./inc/base";
+@import "./inc/reset";
 @import "./inc/legacy";
 @import "./inc/util";
 @import "./inc/components";
@@ -307,44 +308,6 @@ a .get-started {
     }
 }
 
-.footer-info {
-    width: 48%;
-    margin-right: 2%;
-    float: left;
-    ul li {
-        color: #fff;
-        line-height: 30px;
-        font-family: $serif;
-    }
-    h3 {
-        font-family: $mono;
-        font-size: 20px;
-        font-weight: 500;
-    }
-}
-
-.footer {
-    clear: both;
-
-    .f-about .info {
-        border-bottom: none;
-    }
-    .title {
-        font-family: $mono;
-        font-size: 20px;
-        font-weight: 500;
-    }
-    .newsletter form input {
-        height: 40px;
-        border: 0;
-        background: transparent;
-        border-bottom: 2px solid #ffff;
-        border-radius: unset !important;
-        color: #fff !important;
-        padding: unset !important;
-    }
-}
-
 .newsletter {
     max-width: 500px;
     margin: 0 auto;
@@ -528,11 +491,6 @@ a .get-started {
 }
 
 /* pricing page  */
-.project-pricing {
-    padding: 85px 0px;
-    width: 100%;
-    flex-wrap: wrap;
-}
 ul.table-list h5 {
     width: 100%;
     float: left;
@@ -632,7 +590,7 @@ ul.table-list p,
 .table-list p {
     /* font-size: 20px; */
     color: #fff;
-    line-height: 30px;
+    line-height: 1.1;
     /* font-weight: 600; */
 }
 
@@ -707,42 +665,6 @@ ul.table-list p,
 
 .recommended .table-buy .pricing-action:hover {
     background: #228799;
-}
-
-.pricing-table .price h4 {
-    font-size: 50px;
-    color: #fff;
-    text-transform: inherit;
-    font-weight: 100;
-    line-height: 80px;
-}
-
-.pricing-table .price em {
-    color: #fff;
-}
-
-.pricing-table .price span,
-.pricing-table .price em {
-    font-size: 32px;
-    font-style: italic;
-    font-weight: 100;
-}
-
-.pricing-table:hover .pricing-title,
-.pricing-table:hover h3 {
-    background: #746e8a;
-}
-
-.pricing-table:hover .price {
-    background: #534c6e;
-}
-
-.pricing-table:hover .table-list {
-    background: #2c214c;
-}
-
-.pricing-table:hover ul.table-list h5 a:hover {
-    color: #fff;
 }
 
 /* about page  */
@@ -1661,13 +1583,6 @@ ul.table-list h5 a {
         width: 420px;
     }
 
-    .pricing-table {
-        display: block;
-        float: none;
-        margin: 20px 0 20px 0;
-        width: 100%;
-    }
-
     ul.table-list p {
         height: auto !important;
         margin-top: 40px;
@@ -1741,9 +1656,6 @@ ul.table-list h5 a {
     .our-process {
         padding-bottom: 50px;
     }
-    .project-pricing {
-        padding: 40px 0px;
-    }
     .page-id-381 .header-bg {
         padding-bottom: 55px;
     }
@@ -1774,9 +1686,7 @@ ul.table-list h5 a {
     .footer {
         display: flex;
     }
-    footer.footer .col-lg-4.col-md-6:nth-child(1) {
-        order: 2;
-    }
+
     .copy-right-footer1 {
         display: block;
         margin-top: 70px;
@@ -1784,9 +1694,7 @@ ul.table-list h5 a {
     .copy-right-footer {
         display: none;
     }
-    footer.footer .col-lg-4 {
-        margin-bottom: 50px !important;
-    }
+
     .mobile-text-version {
         display: block;
     }
@@ -1956,10 +1864,6 @@ ul.table-list h5 a {
 
     .pricing-wrapper {
         width: 768px;
-    }
-
-    .pricing-table {
-        margin-bottom: 30px;
     }
 
     .table-list li {

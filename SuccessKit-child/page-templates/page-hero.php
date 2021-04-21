@@ -33,7 +33,7 @@ get_header();?>
                                                     $link_title  = $link['title'];
                                                     $link_target = $link['target'] ? $link['target'] : '_self';
                                                 ?>
-									<a class="theme-btn button" href="<?php echo esc_url($link_url); ?>"
+									<a class="theme-btn button sans-serif" href="<?php echo esc_url($link_url); ?>"
 										target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
 									<?php endif;?>
 

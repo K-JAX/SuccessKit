@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "node-sass --watch SuccessKit-child/scss --output-style compressed -o SuccessKit-child/",
     "clean": "rimraf scss",
-    "compile": "node-sass --output-style=expanded --source-map=true SuccessKit-child/scss -o SuccessKit-child/",
+    "compile": "node-sass --output-style=expanded --source-map=true SuccessKit-child/scss/style.scss -o SuccessKit-child/",
     "prefix": "postcss SuccessKit-child/style.css --config postcss.config.js --map=false --output=SuccessKit-child/style.css",
-    "minify": "cleancss --level=1 --source-map --source-map-inline-sources --output SuccessKit-child/style.css SuccessKit-child/style.css",
+    "minify": "cleancss --source-map --source-map-inline-sources SuccessKit-child/style.css --output SuccessKit-child/style.css",
     "dev": "npm run compile -- --watch",
     "build": "npm run clean && npm run compile && npm run prefix && npm run minify"
   },

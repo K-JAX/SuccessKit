@@ -219,6 +219,14 @@
 }
 /* //scroll-indicator */
 
+/* projec pricing */
+.project-pricing {
+    .wp-block-column {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+/* projec pricing */
 /* pricing-table */
 .pricing-table {
     text-align: center;
@@ -231,15 +239,21 @@
     }
     .pricing-title,
     h3 {
+        display: flex;
+        height: 103px;
+        justify-content: center;
+        align-items: center;
         color: #fff;
         background: #8eb1fc;
         margin-bottom: 0px;
         padding: 20px 0;
-        font-size: 28px;
         text-transform: inherit;
-        font-weight: 100;
+        font-weight: 600;
         border-top-left-radius: 10px !important;
         border-top-right-radius: 10px !important;
+        @media all and (max-width: 300px) {
+            font-size: 23px !important;
+        }
     }
     .pricing-title,
     h3.h2 {
@@ -507,3 +521,117 @@
     transform: perspective(400px) rotateY(-16deg);
     box-shadow: 5px 9px 5px 0 rgba(0, 0, 0, 0.25);
 }
+
+/* Project Pricing */
+.project-pricing {
+    width: 100%;
+    flex-wrap: wrap;
+    @media (max-width: 767px) {
+        padding: 40px 0px;
+    }
+    .pricing-table {
+        margin-bottom: 15px;
+        @media all and (max-width: 767px) {
+            display: block;
+            float: none;
+            margin: 10px 0 10px 0;
+            width: 100%;
+        }
+        .price {
+            h4 {
+                font-size: 36px;
+                color: #fff;
+                text-transform: inherit;
+                font-weight: 100;
+                line-height: 80px;
+                @media all and (max-width: 300px) {
+                    font-size: 24px;
+                }
+            }
+            em {
+                color: #fff;
+            }
+            span,
+            em {
+                font-size: 32px;
+                font-style: italic;
+                font-weight: 100;
+            }
+        }
+        &:hover {
+            h3,
+            .pricing-title {
+                background: #746e8a;
+            }
+            .price {
+                background: #534c6e;
+            }
+            .table-list {
+                background: #2c214c;
+            }
+            .wp-block-button a {
+                background-color: #4eff74 !important;
+            }
+        }
+    }
+}
+
+/* footer */
+.footer {
+    clear: both;
+
+    .f-about .info {
+        border-bottom: none;
+    }
+    .title {
+        font-family: $mono;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .newsletter form input {
+        height: 40px;
+        border: 0;
+        background: transparent;
+        border-bottom: 2px solid #ffff;
+        border-radius: unset !important;
+        color: #fff !important;
+        padding: unset !important;
+    }
+
+    .footer-info {
+        width: 48%;
+        margin-right: 2%;
+        float: left;
+        margin-bottom: 20px;
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+        ul {
+            li {
+                color: #fff;
+                line-height: 30px;
+                font-family: $serif;
+            }
+        }
+        h3 {
+            font-family: $mono;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .footer {
+        display: flex;
+    }
+
+    .copy-right-footer1 {
+        display: block;
+        margin-top: 70px;
+    }
+    .copy-right-footer {
+        display: none;
+    }
+}
+/* //footer */

@@ -70,6 +70,11 @@
     background-color: $blue !important;
 }
 
+.theme-btn-hover.green a:hover {
+    color: #2c214d !important;
+    background-color: #4eff74 !important;
+}
+
 .theme-btn {
     background: $green;
     color: $violet;
@@ -99,6 +104,15 @@
     }
 }
 
+body .wide {
+    a {
+        font-size: 0.85em;
+        @media all and (min-width: 768px) {
+            font-size: 1.05em;
+        }
+    }
+}
+
 .theme-grey-bg {
     background: #f6f6f6;
 }
@@ -120,6 +134,10 @@
     font-size: 1.25em;
     margin: 1em 0;
     list-style-image: url("/wp-content/uploads/2020/08/bullet-icon-margin-bigger.png");
+    list-style-position: inside;
+    li::marker {
+        width: 10px;
+    }
 }
 
 .price-list li {
