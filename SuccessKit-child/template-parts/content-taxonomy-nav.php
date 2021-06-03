@@ -41,7 +41,7 @@
 								if($taxonomy->name === 'content_type' && $term_count == 0): 
 							?>
 							<li class="dropdown">
-								<a class="nav-link" href="/our-work">All</a>
+								<a class="nav-link" href="/sample-work">All</a>
 							</li>
 							<?php
 								endif;
