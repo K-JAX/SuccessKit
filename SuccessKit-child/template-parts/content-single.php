@@ -130,6 +130,6 @@ if ( ! empty( $categories ) ) {
 </div>
 
 <div class="container">
-	<h4 class="has-text-align-center process-text mt-4">What people are saying</h4>
+	<h4 class="has-text-align-center sans-serif mt-4">What people are saying</h4>
 	<div class="position-relative"><?php echo do_shortcode('[testimonial_view id="1"]'); ?></div>
 </div>

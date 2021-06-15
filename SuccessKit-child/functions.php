@@ -266,7 +266,7 @@ function my_search_form($form)
             		<button class="btn btn-outline-secondary search-button" type="submit"  value="' . esc_attr__('Search') . '" ></button>
         		</div>
 				<label class="screen-reader-text" for="s">' . __('Search for:') . '</label>
-    			<input class="search-field" type="text" placeholder="Search for articles, videos, whitepapers" value="' . get_search_query() . '" name="s" id="s" />
+    			<input class="search-field" type="text" placeholder="Search for blog posts" value="' . get_search_query() . '" name="s" id="s" />
     		</div>
 		</form>';
 
