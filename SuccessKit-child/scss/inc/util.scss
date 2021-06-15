@@ -79,11 +79,13 @@
     background: $green;
     color: $violet;
     font-weight: 600;
+    font-family: $sans;
     padding: 0.85em 2em;
     border: 3px solid $violet;
     border-radius: 300px;
     &:hover {
         background: #548bff;
+        border-color: $green;
         color: $violet;
         a {
             color: $violet;
