@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Headline Page
+ * Template Name: Headline Page Wide
  */
 get_header(); ?>
 
@@ -24,9 +24,7 @@ get_header(); ?>
         </div>
     </div>
 
-    <div class="container">
         <?php the_content();?>
-    </div>
     <?php endwhile;?>
 </div>
 
