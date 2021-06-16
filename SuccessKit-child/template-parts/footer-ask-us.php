@@ -13,7 +13,7 @@
 			</div>
 			<div class="col-md-6 col-12">
 				<p class="text-white h4 mb-4">Have a question? Reach out to us directly.</p>
-				<a href="mailto:julian@successkit.io" target="_blank" class="theme-btn d-inline-block h4">Contact us</a>
+				<a href="mailto:julian@successkit.io" target="_blank" class="theme-btn d-inline-block">Contact us</a>
 			</div>
 		</div>
 	</div>

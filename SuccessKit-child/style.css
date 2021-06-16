@@ -955,6 +955,15 @@ body .wide a {
 .footer .footer-info ul li {
   color: #fff;
   font-family: "Alegreya", serif;
+  font-weight: 600;
+}
+
+.footer .footer-info ul li a {
+  transition: 0.125s;
+}
+
+.footer .footer-info ul li a:hover {
+  opacity: 0.85;
 }
 
 @media (max-width: 767px) {
@@ -1492,6 +1501,10 @@ span.wpcf7-form-control.wpcf7-checkbox span.wpcf7-list-item-label {
 
 .testimonial-image img {
   border-radius: 300px;
+}
+
+.strong-view.controls-type-sides-outside {
+  padding-bottom: 10px;
 }
 
 /* // Team Plugin */

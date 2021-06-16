@@ -612,6 +612,13 @@
             li {
                 color: #fff;
                 font-family: $serif;
+                font-weight: 600;
+                a {
+                    transition: 0.125s;
+                    &:hover {
+                        opacity: 0.85;
+                    }
+                }
             }
         }
     }
