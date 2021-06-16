@@ -12,7 +12,7 @@
 				<h2 class="text-white text-initial display-3">Ask us anything</h2>
 			</div>
 			<div class="col-md-6 col-12">
-				<p class="text-white h4 mb-5">Have a question? Reach out to us directly.</p>
+				<p class="text-white h4 mb-4">Have a question? Reach out to us directly.</p>
 				<a href="mailto:julian@successkit.io" target="_blank" class="theme-btn d-inline-block h4">Contact us</a>
 			</div>
 		</div>
