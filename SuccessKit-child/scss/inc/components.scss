@@ -1,6 +1,7 @@
 // components
 @import "./var.scss";
 
+/* card */
 .card {
     height: 426px;
     border: 1px solid rgba(0, 34, 51, 0.1);
@@ -60,6 +61,17 @@
     //     height: 240px;
     // }
 }
+/* // card */
+
+/* blog */
+
+.blog-design-content {
+    ul {
+        overflow: hidden;
+    }
+}
+
+/* // blog */
 
 .cat-nav .nav-item.active {
     position: relative;
