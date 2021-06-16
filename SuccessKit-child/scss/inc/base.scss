@@ -43,3 +43,9 @@ fieldset {
 input:focus {
     outline: none;
 }
+
+a {
+    &:hover {
+        color: $blue;
+    }
+}
