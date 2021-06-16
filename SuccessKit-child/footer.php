@@ -11,6 +11,7 @@
 
 ?>
 
+<?php get_template_part('template-parts/footer', 'ask-us'); ?>
 <footer class="footer">
 	<div class="container">
 		<div class="row">
@@ -32,7 +33,7 @@
 				<?php if (is_active_sidebar('footer-3')) {?>
 				<?php dynamic_sidebar('footer-3');?>
 				<?php }?>
-				<?php echo '<p class="text-white">&copy;' . date('Y') . ' SUCCESSKIT</p>'; ?>
+				<?php echo '<p class="text-white sans-serif">&copy;' . date('Y') . ' SUCCESSKIT</p>'; ?>
 
 			</div>
 		</div>
