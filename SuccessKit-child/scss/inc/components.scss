@@ -579,14 +579,16 @@
 /* footer */
 .footer {
     clear: both;
-
     .f-about .info {
         border-bottom: none;
     }
+    h3,
     .title {
-        font-family: $mono;
+        font-family: $sans;
         font-size: 20px;
         font-weight: 500;
+        margin-bottom: 1em;
+        white-space: nowrap;
     }
     .newsletter form input {
         height: 40px;
@@ -609,14 +611,8 @@
         ul {
             li {
                 color: #fff;
-                line-height: 30px;
                 font-family: $serif;
             }
-        }
-        h3 {
-            font-family: $mono;
-            font-size: 20px;
-            font-weight: 500;
         }
     }
 }
