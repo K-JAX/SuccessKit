@@ -133,6 +133,15 @@ span.wpcf7-form-control.wpcf7-checkbox span.wpcf7-list-item-label {
     margin-bottom: 30px;
 }
 
+.tlp-row {
+    align-items: center;
+    .tlp-col-md-9 {
+        h3 {
+            margin-top: -10px;
+        }
+    }
+}
+
 .tlp-team .layout3 .single-team-area h3,
 .tlp-team .layout3 .single-team-area .designation {
     display: inline-block;
@@ -155,7 +164,7 @@ span.wpcf7-form-control.wpcf7-checkbox span.wpcf7-list-item-label {
 }
 
 .tlp-team .layout3 .single-team-area p {
-    font-size: 1.65em;
+    font-size: 1.25em;
     line-height: 30px;
     color: #2c214d;
     font-weight: 500;
