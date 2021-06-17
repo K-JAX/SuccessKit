@@ -176,20 +176,20 @@ function custom_grid_shortcode($atts)
             $custom_query->the_post();
 
             // This is the output for your entry so what you want to do for each post.
-            $output .= '<div class="item">';
-            $output .= '<div class="blog-content">';
             $output .= '<a href="' . get_permalink() . '">';
-            $output .= '<div class="hovereffect">';
-
-            $output .= get_the_post_thumbnail($post_id, array(500, 300));
-            $output .= '<div class="overlay">';
+            $output .= '<div class="post">';
+            $output .= '<div class="card">';
+            $output .= '<div class="embed-responsive embed-responsive-1by1">';
+            $output .= get_the_post_thumbnail($post_id, array(150, 150), array('class' => 'card-post-img card-img-top embed-responsive-item'));
+            $output .= '</div>';
+            $output .= '<div class="card-body px-3 mt-3 pb-3 d-flex flex-column">';
+            $output .= '<span class="card-eyebrow sans-serif">' . get_the_category()[0]->cat_name . '</span>';
             $output .= '<h5>' . get_the_title() . '</h5>';
-
+            $output .= '<p class="card-text sans-serif">' . get_the_excerpt() . '</p>';
+            $output .= '</div>';
+            $output .= '</div>';
             $output .= '</div>';
             $output .= '</a>';
-            $output .= '</div>';
-            $output .= '</div>';
-            $output .= '</div>';
         }
 
         // Close div wrapper around loop
