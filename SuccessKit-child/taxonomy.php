@@ -51,7 +51,7 @@
             );
 
             $query = new WP_Query($args);
-            if ($query->have_posts()): echo $query->max_num_pages; ?>
+            if ($query->have_posts()): ?>
 
             
 

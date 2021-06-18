@@ -338,7 +338,6 @@ if (!function_exists('successkit_scripts')):
         }else{
             $max = ceil($published_posts / $ppp);
         }
-        echo $max;
         
         wp_deregister_script('iso-jquery');
         wp_dequeue_script( 'iso-jquery');
