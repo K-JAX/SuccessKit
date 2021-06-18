@@ -22,6 +22,7 @@
 				class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children dropdown nav-item">
 				<?php $term_args = array(
                         'taxonomy' => $taxonomy->name,
+						'parent' => 0
                         // 'hide_empty' => false,
                     );
                     $terms = get_terms($term_args);
@@ -33,7 +34,10 @@
 
 					<?php
                         $term_count = 0;
-                        $col_total  = $taxonomy->name === 'industry_type' ? 7 : 6;
+						$total = count($terms);
+						$factor = floor($total / 6) + 1;
+						$col_total = ceil($total / $factor);
+
                         foreach ($terms as $term):
                             $parent = $term->parent;
                             if ($parent == '0'):

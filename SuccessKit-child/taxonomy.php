@@ -31,6 +31,20 @@
                         'taxonomy' => $tax,
                         'field'    => 'term_id',
                         'terms'    => $termId,
+                        'operator' => 'IN'
+                    ),
+                ),
+                'meta_query'	=> array(
+                    'relation'		=> 'OR',
+                    array(
+                        'key'	 	=> 'pdf_upload',
+                        'value'	  	=> array(''),
+                        'compare' 	=> 'NOT IN',
+                    ),
+                    array(
+                        'key'	 	=> 'video_link',
+                        'value'	  	=> array(''),
+                        'compare' 	=> 'NOT IN',
                     ),
                 ),
                 'orderby'        => array('menu_order' => 'ASC', 'post_date' => "DESC"),
@@ -38,6 +52,8 @@
 
             $query = new WP_Query($args);
             if ($query->have_posts()): ?>
+
+            
 
 			<ul id="ajax-posts" class="posts list-unstyled row flex-wrap">
 				<?php while ($query->have_posts()): $query->the_post();?>
@@ -54,7 +70,7 @@
                 </button>
             </div>
             <?php endif; ?>
-            <?php wp_reset_postdata(); ?>
+            <?php wp_reset_postdata(); wp_reset_query(); ?>
 
 		</div>
 	</section>
