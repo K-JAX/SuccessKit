@@ -58,8 +58,6 @@ jQuery(function ($) {
         }
 
         str =
-            "&offset=" +
-            (pageNumber * ppp + 1) +
             "&ppp=" +
             ppp +
             "&pageNumber=" +
@@ -75,7 +73,13 @@ jQuery(function ($) {
             url: ajax_posts.ajaxurl,
             data: str,
             success: function (data) {
-                console.log(pageNumber + " of " + ajax_posts.max_page);
+                console.log(
+                    pageNumber +
+                        " of " +
+                        ajax_posts.max_page +
+                        ". Total posts: " +
+                        ajax_posts.total
+                );
 
                 var $data = $(data);
                 if ($data.length) {
