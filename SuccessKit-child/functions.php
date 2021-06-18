@@ -374,7 +374,7 @@ function more_post_ajax(){
     $termArray = $term !== 'all' ? array(
         'taxonomy'       => $tax,
         'field'    => 'term_id',
-        'terms'    => $termId,
+        'terms'    => $term,
         'operator' => 'IN'
     ) : '';
     
