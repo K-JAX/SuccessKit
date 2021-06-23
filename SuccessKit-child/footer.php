@@ -50,12 +50,12 @@ jQuery('.loop').owlCarousel({
 	center: true,
 	items: 1,
 	loop: true,
-	margin: 20,
+	margin: 0,
 	autoplay: true,
 	autoplayTimeout: 3000,
 	responsive: {
-		150: {
-			items: 4
+		650: {
+			items: 3
 		}
 	}
 });

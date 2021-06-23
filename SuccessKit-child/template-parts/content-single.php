@@ -15,7 +15,7 @@
 </div>
 
 
-<div class="our-process">
+<div class="our-process mt-3">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
@@ -81,7 +81,7 @@ if ( ! empty( $categories ) ) {
 				</div>
 				<div class="col-sm-12 col-md-12 col-xl-9 col-lg-9 ">
 					<div class="about-content-team-message">
-						<h3 class="sans-serif"><?php echo get_the_author_meta('display_name');?> <img
+						<h3 class="text-purple "><?php echo get_the_author_meta('display_name');?> <img
 								src="<?php echo site_url(); ?>/wp-content/uploads/2020/02/arrow-icon.png"
 								class="img-fluid"> <a href="mailto:<?php 
       echo $user_email = get_the_author_meta('user_email');
@@ -102,7 +102,7 @@ if ( ! empty( $categories ) ) {
 		<h2 class="text-center">Recent Posts</h2>
 	</div>
 
-	<div class="case-study-container">
+	<div class="recent-post-container container">
 		<div class="loop owl-carousel owl-theme">
 			<?php echo do_shortcode("[custom_grid_post]"); ?>
 
