@@ -248,10 +248,10 @@
     transition: all 0.25s ease;
     border-radius: 20px;
     &.priority {
-        transform: scale(1.05);
+        transform: scale(1.08);
     }
     &:hover {
-        transform: scale(1.07);
+        transform: scale(1.1);
     }
     .pricing-title,
     h3 {
