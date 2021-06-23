@@ -5,9 +5,9 @@
     $len   = 24;
     $title = strlen(get_the_title()) > $len ? substr(get_the_title(), 0, $len) . '...' : get_the_title();
     if (has_post_thumbnail()) {
-        $img_url = get_the_post_thumbnail_url(get_the_id(), 'medium');
+        $img_url = get_the_post_thumbnail_url(get_the_id(), array(400, 200));
     } else {
-        $img_url = 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=640&q=80';
+        $img_url = $wp_upload_dir . '/default-img.jpg';
     }
 ?>
 
