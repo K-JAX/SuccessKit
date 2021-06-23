@@ -180,6 +180,8 @@ function custom_grid_shortcode($atts)
             } else {
                 $img_url = $wp_upload_dir . '/default-img.jpg';
             }
+            $len   = 24;
+            $title = strlen(get_the_title()) > $len ? substr(get_the_title(), 0, $len) . '...' : get_the_title();
 
             // This is the output for your entry so what you want to do for each post.
             $output .= '<a href="' . get_permalink() . '">';
@@ -191,7 +193,7 @@ function custom_grid_shortcode($atts)
             $output .= '</div>';
             $output .= '<div class="card-body px-3 mt-3 pb-3 d-flex flex-column">';
             $output .= '<span class="card-eyebrow sans-serif">' . get_the_category()[0]->cat_name . '</span>';
-            $output .= '<h5 class="card-title h5 sans-serif">' . get_the_title() . '</h5>';
+            $output .= '<h5 class="card-title h5 sans-serif">' . $title . '</h5>';
             $output .= '<p class="card-text sans-serif">' . get_the_excerpt() . '</p>';
             $output .= '</div>';
             $output .= '</div>';
