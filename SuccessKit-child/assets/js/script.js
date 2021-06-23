@@ -73,13 +73,7 @@ jQuery(function ($) {
             url: ajax_posts.ajaxurl,
             data: str,
             success: function (data) {
-                console.log(
-                    pageNumber +
-                        " of " +
-                        ajax_posts.max_page +
-                        ". Total posts: " +
-                        ajax_posts.total
-                );
+                console.log(pageNumber + " of " + ajax_posts.max_page);
 
                 var $data = $(data);
                 if ($data.length) {
@@ -104,16 +98,19 @@ jQuery(function ($) {
         return false;
     }
 
-    $("#more_posts").on("click", function () {
-        // When btn is pressed.
-        var tax = $(this).attr("data-tax");
-        var term = $(this).attr("data-term");
-        // console.log("tax: " + tax + ", term: " + term);
-        $("#more_posts")
-            .attr("disabled", true)
-            .text("Loading")
-            .addClass("spinner"); // Disable the button, temp.
-        load_posts(tax, term);
-        $(this).parent("#more-post-container").insertAfter("#ajax-posts"); // Move the 'Load More' button to the end of the the newly added posts.
-    });
+    if ($("#ajax-posts").length > 0) {
+        $(window).on("scroll", function () {
+            console.log($(window).scrollTop() + $(window).height());
+            console.log($(document).height() - 700);
+
+            if (
+                $(window).scrollTop() + $(window).height() >=
+                $(document).height() - 700
+            ) {
+                var tax = $("#ajax-posts").attr("data-tax");
+                var term = $("#ajax-posts").attr("data-term");
+                load_posts(tax, term);
+            }
+        });
+    }
 });
