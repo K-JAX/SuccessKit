@@ -7,7 +7,7 @@
     if (has_post_thumbnail()) {
         $img_url = get_the_post_thumbnail_url(get_the_id(), 'medium');
     } else {
-        $img_url = 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=640&q=80';
+        $img_url = wp_upload_dir() . 'default-img.jpg';
     }
 	// $terms = wp_get_post_terms( get_the_ID(), 'content_type');
 	// $terms = get_the_terms(get_the_ID(), 'content_type');

@@ -33,7 +33,7 @@
     font-size: 12px;
     line-height: 15px;
     font-weight: 400;
-    color: #4c6470;
+    color: $indigo;
     text-transform: uppercase;
 }
 
@@ -42,7 +42,8 @@
     margin-top: auto;
     font-size: 16px;
     line-height: 24px;
-    color: #0af;
+    color: $blue;
+    // color: #0af;
     &:after {
         font-family: "FontAwesome";
         content: "\f054";
@@ -498,9 +499,6 @@
         }
     }
 }
-#content_type-menu > .nav-col {
-    font-weight: bold;
-}
 /* //menu nav item */
 
 .taxonomy-content-section {
@@ -598,17 +596,89 @@
     }
 }
 
+/* header */
+
+header .navbar .nav-link {
+    font-size: 16px !important;
+    color: #fff !important;
+    font-family: $sans;
+    font-weight: 600;
+}
+
+header .navbar li.nav-item {
+    margin: 0 25px 0 0;
+}
+
+header .navbar .dropdown-menu {
+    margin-bottom: 5px;
+}
+
+body.mobile-menu {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.header--fixed.mobile-menu {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+@media all and (max-width: 992px) {
+    header .navbar .nav-link {
+        font-size: 24px !important;
+    }
+    header .navbar-nav .dropdown-menu {
+        font-size: 24px;
+    }
+    a .get-started {
+        font-size: 24px;
+        border-radius: 300px;
+    }
+}
+
+/* reseting the parent theme menu dropdown caret look */
+.dropdown-toggle::after {
+    display: none;
+}
+.dropdown-btn {
+    display: none;
+}
+
+.get-started {
+    float: right;
+    margin-left: 15px;
+    background: $green;
+    padding: 15px 50px;
+    border-radius: 30px;
+    border: 3px solid $indigo;
+    transition: 0.25s;
+    &:hover {
+        color: #253a50;
+        background: #548bff;
+        border-color: $green;
+    }
+}
+a .get-started {
+    font-weight: 600;
+    color: #253a50 !important;
+    font-family: $sans;
+}
+
+/* //header */
+
 /* footer */
 .footer {
     clear: both;
-
     .f-about .info {
         border-bottom: none;
     }
+    h3,
     .title {
-        font-family: $mono;
+        font-family: $sans;
         font-size: 20px;
         font-weight: 500;
+        margin-bottom: 1em;
+        white-space: nowrap;
     }
     .newsletter form input {
         height: 40px;
@@ -631,14 +701,16 @@
         ul {
             li {
                 color: #fff;
-                line-height: 30px;
                 font-family: $serif;
+                font-weight: 400;
+                font-size: 1.15rem;
+                a {
+                    transition: 0.125s;
+                    &:hover {
+                        opacity: 0.85;
+                    }
+                }
             }
-        }
-        h3 {
-            font-family: $mono;
-            font-size: 20px;
-            font-weight: 500;
         }
     }
 }
@@ -715,7 +787,7 @@
     line-height: 1.5;
     font-weight: 500;
     * {
-        color: $violet;
+        color: $indigo;
     }
     h2 {
         color: $blue;
@@ -796,7 +868,7 @@
             display: inline-block !important;
             font-family: $sans;
             font-size: 13px;
-            color: $violet;
+            color: $indigo;
             margin-left: 5px;
             margin-bottom: 0;
         }
@@ -832,12 +904,12 @@
 }
 
 .blog-contact-form input[type="submit"] {
-    color: $violet !important;
+    color: $indigo !important;
     cursor: pointer;
     background: $green;
     padding: 15px 50px !important;
     border-radius: 30px;
-    border: 3px solid $violet;
+    border: 3px solid $indigo;
     height: unset;
     font-family: $sans;
     font-weight: 600;

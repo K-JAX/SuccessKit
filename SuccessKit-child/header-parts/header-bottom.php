@@ -35,7 +35,7 @@
 			<?php endif;?>
 			<a id="greenBttn" href="<?php echo site_url(); ?>/learn-more/">
 				<div class="get-started">
-					Learn More
+					Learn more
 				</div>
 			</a>
 		</div>
