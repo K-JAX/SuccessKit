@@ -63,8 +63,39 @@
 }
 /* // card */
 
-/* blog */
+/* page */
 
+.top-title {
+    height: auto;
+    min-height: 100px;
+    background-color: #548bff !important;
+    h1 {
+        text-align: center;
+    }
+    h2 {
+        position: relative;
+        top: auto;
+        @media all and (max-width: 767px) {
+            top: 0;
+        }
+    }
+}
+
+.headline-title {
+    h1 {
+        font-size: 70px;
+        text-transform: capitalize;
+        font-weight: 100;
+        transform: none !important;
+    }
+    * {
+        color: white;
+    }
+}
+
+/* //page */
+
+/* blog */
 .blog-design-content {
     ul {
         overflow: hidden;
