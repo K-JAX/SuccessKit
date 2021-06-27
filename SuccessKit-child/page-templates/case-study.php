@@ -52,14 +52,7 @@ get_header();
 
 			</ul>
 			<?php endif;?>
-            <?php if($query->max_num_pages > 1): ?>
-            <div id="more-post-container" class="row col-12 mt-2 justify-content-center sans-serif">
-                <button id="more_posts" class="theme-btn d-flex justify-content-center theme-border wide text-center h4 col-9">
-                    Load more
-                </button>
-            </div>
-            <?php endif; ?>
-                <?php wp_reset_postdata(); ?>
+            <?php wp_reset_postdata(); ?>
 		</div>
 	</section>
 </main>
