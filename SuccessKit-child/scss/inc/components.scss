@@ -33,7 +33,7 @@
     font-size: 12px;
     line-height: 15px;
     font-weight: 400;
-    color: #4c6470;
+    color: $indigo;
     text-transform: uppercase;
 }
 
@@ -684,7 +684,7 @@ body.mobile-menu {
     background: $green;
     padding: 15px 50px;
     border-radius: 30px;
-    border: 3px solid $violet;
+    border: 3px solid $indigo;
     transition: 0.25s;
     &:hover {
         color: #253a50;
@@ -821,7 +821,7 @@ a .get-started {
     line-height: 1.5;
     font-weight: 500;
     * {
-        color: $violet;
+        color: $indigo;
     }
     h2 {
         color: $blue;
@@ -902,7 +902,7 @@ a .get-started {
             display: inline-block !important;
             font-family: $sans;
             font-size: 13px;
-            color: $violet;
+            color: $indigo;
             margin-left: 5px;
             margin-bottom: 0;
         }
@@ -938,12 +938,12 @@ a .get-started {
 }
 
 .blog-contact-form input[type="submit"] {
-    color: $violet !important;
+    color: $indigo !important;
     cursor: pointer;
     background: $green;
     padding: 15px 50px !important;
     border-radius: 30px;
-    border: 3px solid $violet;
+    border: 3px solid $indigo;
     height: unset;
     font-family: $sans;
     font-weight: 600;

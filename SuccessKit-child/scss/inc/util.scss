@@ -13,8 +13,9 @@
     font-family: "Roboto Mono", monospace !important;
 }
 
+
 .text-purple {
-    color: $violet;
+    color: $indigo;
 }
 
 .text-white {
@@ -57,7 +58,7 @@
 /* //utility classes */
 
 .theme-border {
-    border: 3px solid $violet;
+    border: 3px solid $indigo;
     border-radius: 300px;
 }
 
@@ -77,18 +78,18 @@
 
 .theme-btn {
     background: $green;
-    color: $violet;
+    color: $indigo;
     font-weight: 600;
     font-family: $sans;
     padding: 0.85em 2em;
-    border: 3px solid $violet;
+    border: 3px solid $indigo;
     border-radius: 300px;
     &:hover {
         background: #548bff;
         border-color: $green;
-        color: $violet;
+        color: $indigo;
         a {
-            color: $violet;
+            color: $indigo;
         }
     }
     &.wide {

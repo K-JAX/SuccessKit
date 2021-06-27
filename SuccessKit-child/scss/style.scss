@@ -28,7 +28,7 @@ Updated: 2020-02-13 10:43:51
         font-size: 22px;
     }
     p {
-        color: $violet;
+        color: $indigo;
         line-height: 27px;
         font-weight: 500;
         font-size: 18px;
@@ -63,12 +63,10 @@ a.custom-logo-link img {
     background-color: $blue;
     .container {
         padding-bottom: 20px;
-        border-bottom: 3px solid $violet;
+        border-bottom: 3px solid $indigo;
         max-width: 1440px !important;
     }
 }
-
-
 
 .banner-size {
     width: 85%;
@@ -87,20 +85,20 @@ a.custom-logo-link img {
         text-transform: initial;
         font-weight: 500;
         font-style: italic;
-        color: $violet;
+        color: $indigo;
         margin-bottom: 30px;
         line-height: 60px;
         font-size: 43px;
     }
     h4 {
-        color: $violet;
+        color: $indigo;
         font-family: $mono;
         font-size: 16px;
         margin-bottom: 50px;
     }
     a,
     span {
-        color: $violet;
+        color: $indigo;
         font-family: $sans;
         font-size: 18px;
         padding-bottom: 10px;
@@ -128,17 +126,6 @@ a.custom-logo-link img {
     font-size: 50px;
     font-weight: 500;
     text-transform: inherit;
-}
-
-.owl-theme .owl-dots .owl-dot.active span,
-.owl-theme .owl-dots .owl-dot:hover span {
-    background: #2c214d !important;
-}
-
-.owl-carousel .owl-nav button.owl-next,
-.owl-carousel .owl-nav button.owl-prev,
-.owl-carousel button.owl-dot {
-    outline: none;
 }
 
 .process-count {
@@ -375,7 +362,7 @@ a.custom-logo-link img {
 }
 
 .carousel-indicators .active {
-    background: $violet !important;
+    background: $indigo !important;
 }
 
 .carousel-indicators {
@@ -844,13 +831,9 @@ img.envolope-text {
     clear: both;
 }
 
-
-
 .process-text a {
     text-decoration: underline;
 }
-
-
 
 /**---------------- Media query ----------------**/
 @media only screen and (min-width: 48em) {
@@ -902,7 +885,7 @@ section.contact-recent-posts {
         width: 100%;
         float: left;
         font-size: 20px;
-        color: $violet;
+        color: $indigo;
         margin-top: 1em;
         margin-bottom: 1em;
         margin-left: 15px;
@@ -973,8 +956,6 @@ section.contact-recent-posts .hovereffect img {
 .learn-text a:hover {
     border: 3px solid #4eff74;
 }
-
-
 
 .slider-text a:hover {
     border: 3px solid #4eff74;
@@ -1057,7 +1038,7 @@ a.yellow {
         font-size: 36px;
         text-transform: capitalize;
         font-weight: 400;
-        color: $violet;
+        color: $indigo;
         margin-top: 30px;
         font-style: italic;
     }
@@ -1065,12 +1046,12 @@ a.yellow {
         font-size: 30px;
         text-transform: capitalize;
         font-weight: 400;
-        color: $violet;
+        color: $indigo;
         font-style: italic;
         line-height: 45px;
     }
     p {
-        color: $violet;
+        color: $indigo;
         font-size: 26px;
         font-weight: 600;
         margin-top: 20px;
@@ -1133,7 +1114,7 @@ ul.table-list h5 a {
     p {
         font-size: 20px;
         text-transform: uppercase;
-        color: $violet;
+        color: $indigo;
         font-weight: 600;
         font-family: $mono;
     }
@@ -1603,7 +1584,7 @@ ul.table-list h5 a {
     }
 
     .header--fixed .container {
-        border-bottom: 4px solid $violet;
+        border-bottom: 4px solid $indigo;
     }
     .header-bg {
         padding-top: 8px !important;
