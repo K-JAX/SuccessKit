@@ -659,14 +659,16 @@ a .get-started {
 /* footer */
 .footer {
     clear: both;
-
     .f-about .info {
         border-bottom: none;
     }
+    h3,
     .title {
-        font-family: $mono;
+        font-family: $sans;
         font-size: 20px;
         font-weight: 500;
+        margin-bottom: 1em;
+        white-space: nowrap;
     }
     .newsletter form input {
         height: 40px;
@@ -689,14 +691,16 @@ a .get-started {
         ul {
             li {
                 color: #fff;
-                line-height: 30px;
                 font-family: $serif;
+                font-weight: 400;
+                font-size: 1.15rem;
+                a {
+                    transition: 0.125s;
+                    &:hover {
+                        opacity: 0.85;
+                    }
+                }
             }
-        }
-        h3 {
-            font-family: $mono;
-            font-size: 20px;
-            font-weight: 500;
         }
     }
 }
