@@ -33,7 +33,7 @@
 				<?php if (is_active_sidebar('footer-3')) {?>
 				<?php dynamic_sidebar('footer-3');?>
 				<?php }?>
-				<?php echo '<p class="text-white sans-serif">&copy;' . date('Y') . ' SuccessKit</p>'; ?>
+				<?php echo '<p class="text-white sans-serif">&copy; ' . date('Y') . ' SuccessKit</p>'; ?>
 
 			</div>
 		</div>
