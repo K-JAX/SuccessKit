@@ -64,8 +64,44 @@
 }
 /* // card */
 
-/* blog */
+/* page */
+.page-template-page-headline,
+.page-template-page-headline-wide {
+    .top-title {
+        h1 {
+            text-align: center;
+        }
+    }
+}
 
+.top-title {
+    height: auto;
+    min-height: 100px;
+    background-color: #548bff !important;
+    h2 {
+        position: relative;
+        top: auto;
+        @media all and (max-width: 767px) {
+            top: 0;
+        }
+    }
+}
+
+.headline-title {
+    h1 {
+        font-size: 70px;
+        text-transform: capitalize;
+        font-weight: 100;
+        transform: none !important;
+    }
+    * {
+        color: white;
+    }
+}
+
+/* //page */
+
+/* blog */
 .blog-design-content {
     ul {
         overflow: hidden;
@@ -247,8 +283,11 @@
     box-shadow: 10px 5px 13px rgba(0, 0, 0, 0.19);
     transition: all 0.25s ease;
     border-radius: 20px;
+    &.priority {
+        transform: scale(1.08);
+    }
     &:hover {
-        transform: scale(1.06);
+        transform: scale(1.1);
     }
     .pricing-title,
     h3 {

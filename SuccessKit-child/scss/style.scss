@@ -423,33 +423,6 @@ ul.table-list h5 {
     margin-top: 14px;
 }
 
-.top-title {
-    height: auto;
-    min-height: 100px;
-    background-color: #548bff !important;
-}
-
-.top-title h2 {
-    position: relative;
-    top: auto;
-}
-
-@media all and (max-width: 767px) {
-    .top-title h2 {
-        top: 0;
-    }
-}
-
-.headline-title h2 {
-    font-size: 70px;
-    text-transform: capitalize;
-    font-weight: 100;
-    transform: none !important;
-}
-.headline-title * {
-    color: white;
-}
-
 .page-id-381 .header-bg {
     width: 100%;
     float: left;
