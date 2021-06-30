@@ -168,28 +168,37 @@ function custom_grid_shortcode($atts)
     if ($custom_query->have_posts()) {
 
         // Open div wrapper around loop
-
+        
         // Loop through posts
         while ($custom_query->have_posts()) {
-
+            
             // Sets up post data so you can use functions like get_the_title(), get_permalink(), etc
             $custom_query->the_post();
 
+            if (has_post_thumbnail()) {
+                $img_url = get_the_post_thumbnail_url(get_the_id(), array(400, 200));
+            } else {
+                $img_url = $wp_upload_dir . '/default-img.jpg';
+            }
+            $len   = 24;
+            $title = strlen(get_the_title()) > $len ? substr(get_the_title(), 0, $len) . '...' : get_the_title();
+
             // This is the output for your entry so what you want to do for each post.
-            $output .= '<div class="item">';
-            $output .= '<div class="blog-content">';
             $output .= '<a href="' . get_permalink() . '">';
-            $output .= '<div class="hovereffect">';
-
-            $output .= get_the_post_thumbnail($post_id, array(500, 300));
-            $output .= '<div class="overlay">';
-            $output .= '<h5>' . get_the_title() . '</h5>';
-
+            $output .= '<div class="post">';
+            $output .= '<div class="card">';
+            $output .= '<div class="embed-responsive embed-responsive-4by3">';
+            // $output .= get_the_post_thumbnail($post_id, array(400, 200), array('class' => 'card-post-img card-img-top embed-responsive-item'));
+            $output .= '<img src="' . $img_url . '" class="card-post-img card-img-top embed-responsive-item" />';
+            $output .= '</div>';
+            $output .= '<div class="card-body px-3 mt-3 pb-3 d-flex flex-column">';
+            $output .= '<span class="card-eyebrow sans-serif">' . get_the_category()[0]->cat_name . '</span>';
+            $output .= '<h5 class="card-title h5 sans-serif">' . $title . '</h5>';
+            $output .= '<p class="card-text sans-serif">' . get_the_excerpt() . '</p>';
+            $output .= '</div>';
+            $output .= '</div>';
             $output .= '</div>';
             $output .= '</a>';
-            $output .= '</div>';
-            $output .= '</div>';
-            $output .= '</div>';
         }
 
         // Close div wrapper around loop
@@ -232,6 +241,8 @@ function placeholder_comment_form_field($fields)
 
     $fields['comment_field'] = '<p class="comment-form-comment"><label for="comment">' . _x('Comment', 'noun') .
         '</label><textarea id="comment" name="comment" cols="45" rows="8" placeholder="' . $replace_comment . '" aria-required="true"></textarea></p>';
+
+    $fields['label_submit'] = 'Post comment';
 
     return $fields;
 }

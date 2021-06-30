@@ -10,32 +10,24 @@
 get_header();
 ?>
 <div class="container">
-<div class="article-heading">
-	<h1>Article</h1>
-</div>
-</div>
-
+	<div class="article-heading">
+		<h1>Article</h1>
+	</div>
 </div>
 
-		
-					<?php
-					while ( have_posts() ) :
-						the_post();
+</div>
 
-						get_template_part( 'template-parts/content', 'single' );
 
-						the_post_navigation();
+<?php
+	while ( have_posts() ) :
+		the_post();
 
-				// 		// If comments are open or we have at least one comment, load up the comment template.
-				// 		if ( comments_open() || get_comments_number() ) :
-				// 			comments_template();
-				// 	endif;
+		get_template_part( 'template-parts/content', 'single' );
 
-					endwhile; // End of the loop.
-					?>
+		the_post_navigation();
 
-			
-
+	endwhile;
+	?>
 
 <?php
 get_footer();
