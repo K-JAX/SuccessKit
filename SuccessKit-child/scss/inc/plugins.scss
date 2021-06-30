@@ -133,32 +133,47 @@ span.wpcf7-form-control.wpcf7-checkbox span.wpcf7-list-item-label {
     margin-bottom: 30px;
 }
 
-.tlp-team .layout3 .single-team-area h3,
-.tlp-team .layout3 .single-team-area .designation {
-    display: inline-block;
-    font-family: "Alegreya", serif !important;
-    text-transform: initial;
-    font-size: 36px;
-    font-weight: 100;
-    font-style: italic;
-    color: $indigo;
+.tlp-row {
+    align-items: center;
+    .tlp-col-md-9 {
+        h3 {
+            margin-top: -10px;
+        }
+    }
 }
 
-.tlp-team .layout3 .single-team-area h3:after {
-    content: "";
-    position: relative;
-    display: inline-block;
-    width: 31px;
-    height: 31px;
-    margin: 0.5em 0.075em -0.08em 0.25em;
-    background-image: url("https://successkit.io/wp-content/uploads/2020/02/arrow-icon.png");
-}
-
-.tlp-team .layout3 .single-team-area p {
-    font-size: 20px;
-    line-height: 30px;
-    color: #2c214d;
-    font-weight: 500;
+.tlp-team {
+    .layout3 {
+        .single-team-area {
+            h3,
+            .designation {
+                display: inline-block;
+                font-family: $serif;
+                text-transform: initial;
+                font-size: 36px;
+                font-weight: 100;
+                font-style: italic;
+                color: $indigo;
+            }
+            h3 {
+                &:after {
+                    content: "";
+                    position: relative;
+                    display: inline-block;
+                    width: 31px;
+                    height: 31px;
+                    margin: 0.5em 0.075em -0.08em 0.25em;
+                    background-image: url("https://successkit.io/wp-content/uploads/2020/02/arrow-icon.png");
+                }
+            }
+            p {
+                font-size: 1.25em;
+                line-height: 30px;
+                color: $indigo;
+                font-weight: 500;
+            }
+        }
+    }
 }
 
 .testimonial-image img {
