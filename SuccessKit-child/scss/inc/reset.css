@@ -1,0 +1,8 @@
+header.background .b-header {
+  border-top: none;
+}
+
+footer div[class*="col-"] {
+  margin-bottom: 0;
+}
+/*# sourceMappingURL=reset.css.map */
