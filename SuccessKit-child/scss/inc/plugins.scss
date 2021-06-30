@@ -67,12 +67,12 @@
 
 .wpcf7-submit {
     float: left;
-    color: $violet !important;
+    color: $indigo !important;
     cursor: pointer;
     background: $green;
     padding: 15px 50px !important;
     border-radius: 30px;
-    border: 3px solid $violet;
+    border: 3px solid $indigo;
     height: unset;
     font-weight: 600;
     font-size: 17px !important;
@@ -170,3 +170,18 @@ span.wpcf7-form-control.wpcf7-checkbox span.wpcf7-list-item-label {
 }
 
 /* // Team Plugin */
+
+/* owl carousel */
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: $indigo !important;
+}
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel button.owl-dot {
+    outline: none;
+}
+
+/* // owl carousel */

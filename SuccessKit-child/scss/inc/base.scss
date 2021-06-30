@@ -17,6 +17,7 @@ h4,
 h5 {
     font-family: $serif;
     text-transform: initial;
+    color: $indigo;
 }
 
 /* normalizing list items */
@@ -31,6 +32,10 @@ li {
 
 p {
     font-size: 1em;
+}
+
+a {
+    color: $indigo;
 }
 
 fieldset {
