@@ -64,14 +64,19 @@
 /* // card */
 
 /* page */
+.page-template-page-headline,
+.page-template-page-headline-wide {
+    .top-title {
+        h1 {
+            text-align: center;
+        }
+    }
+}
 
 .top-title {
     height: auto;
     min-height: 100px;
     background-color: #548bff !important;
-    h1 {
-        text-align: center;
-    }
     h2 {
         position: relative;
         top: auto;
